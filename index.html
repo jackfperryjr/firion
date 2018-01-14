@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Final Fantasy Compendium</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Six+Caps|Special+Elite">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+    </head>
+    <body ng-app="charApp">
+        <div class="header">
+        <img class="header-logo" src="http://68.media.tumblr.com/d04b43813691276e3c46076bdc02a9aa/tumblr_ohrn5cPUnL1r2vm6xo1_500.gif">
+        <h1>Final Fantasy Compendium</h1>
+    </div>
+    <div id="main-content">
+        <div id="compendium">
+            <div ng-controller="charControl">
+                <div class="search-card">
+                <h2>enter name: <input type="text" ng-model="search"></h2>
+                </div>
+                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search)" ng-hide="filteredData.length==characters.length">
+                    <h2>{{character.name}}</h2>
+                    <div class="char-info">
+                        <h5>Age: {{character.age}}</h5>
+                        <h5>Race: {{character.race}}</h5>
+                        <h5>Gender: {{character.gender}}</h5>
+                        <h5>Height: {{character.height}}</h5>
+                        <h5>Weight: {{character.weight}}</h5>
+                        <h5>Class: {{character.class}}</h5>
+                        <h5>Origin: {{character.origin}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="moogle" class="hvr-hang" 
+    src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
+    <script src="index.js"></script>
+    </body>
+</html>
