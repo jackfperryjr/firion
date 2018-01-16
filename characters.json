@@ -1,4 +1,4 @@
-[{"id":"001","name":"Cecil Harvey","age":"20","height":"1.78m","weight":"58kg","race":"Half-Lunarian","gender":"Male","class":"Paladin","origin":"FFIV"},
+[{"id":"001","name":"Cecil Harvey","age":"20","height":"1.78m","weight":"58kg","race":"Half-Lunarian","gender":"Male","class":"Paladin","origin":"FFIV","image":"https://vignette3.wikia.nocookie.net/finalfantasy/images/f/f3/Cecil_Paladin.jpg/revision/latest?cb=20120706124206"},
 {"id":"002","name":"Rosa Farrell","age":"19","height":"1.62m","weight":"47kg","race":"Human","gender":"Female","class":"White Mage","origin":"FFIV"},
 {"id":"003","name":"Kain Highwind","age":"21","height":"1.83m","weight":"61kg","race":"Human","gender":"Male","class":"Dragoon Knight","origin":"FFIV"},
 {"id":"004","name":"Rydia","age":"7","height":"1.07m","weight":"18kg","race":"Human","gender":"Female","class":"Summoner","origin":"FFIV"},
