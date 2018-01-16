@@ -7,4 +7,5 @@ app.controller('charControl', function($scope, $http) {
      .then(function(response) {
 	    $scope.characters = response.data;
      });
+    $scope.quantity = 1;
 });

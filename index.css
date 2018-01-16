@@ -58,6 +58,7 @@ h1 img {
 }
 
 input[type=text] {
+  background: rgba(255, 255, 255, .0);
   border: none;
   border-bottom: 2px solid black;
   font-size: 16pt;
@@ -67,9 +68,8 @@ input[type=text] {
 }
 
 .search-card {
-  opacity: .8;
   width: 50%;
-  background: white;
+  background: rgba(255, 255, 255, .7);
   color: black;
   border-radius: 5px;
   margin-top: 1em;
@@ -80,7 +80,7 @@ input[type=text] {
 
 .char-card {
   width: 50%;
-  background: white;
+  background: rgba(255, 255, 255, .7);
   color: black;
   border-radius: 5px;
   margin-top: 1em;
@@ -97,9 +97,17 @@ input[type=text] {
   line-height: 1px;
 }
 
+.description {
+  margin: 1em;
+  text-align: left;
+  float: left;
+  line-height: 14px;
+}
+
 .char-image img {
-  padding-right: 25px;
-  padding-bottom: 10px;
+  padding-top: 2%;
+  padding-right: 10%;
+  padding-bottom: 2%;
   float: right;
   height: auto;
   width: 35%;

@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Final Fantasy Compendium</title>
+        <link rel="icon" href="https://vignette.wikia.nocookie.net/finalfantasy/images/a/ad/M3on3-cactuar.png/revision/latest?cb=20070325001642">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Six+Caps|Special+Elite">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
@@ -21,7 +22,7 @@
                 <div class="search-card">
                 <h2>enter name: <input type="text" ng-model="search"></h2>
                 </div>
-                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search)" ng-hide="filteredData.length==characters.length">
+                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
                     <h2>{{character.name}}</h2>
                     <div class="char-info">
                         <h5>Age: {{character.age}}</h5>
@@ -33,8 +34,9 @@
                         <h5>Origin: {{character.origin}}</h5>
                     </div>
                     <div class="char-image">
-                        <img src="https://pre00.deviantart.net/a953/th/pre/f/2011/216/4/5/final_fantasy_iv_logo_by_eldi13-d42w6zt.png">
+                        <img src="https://orig00.deviantart.net/7f7e/f/2014/133/a/3/chocobo_bigger_animated_by_invidias-d7hsc3t.gif">
                     </div>
+                    <h5 class="description">{{character.description}}</h5>
                 </div>
             </div>
         </div>
