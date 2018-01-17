@@ -96,6 +96,7 @@ input[type=text] {
   text-align: left;
   float: left;
   line-height: 1px;
+  letter-spacing: 0px;
 }
 
 .description {
@@ -111,7 +112,7 @@ input[type=text] {
   padding-bottom: 2%;
   float: right;
   height: auto;
-  width: 33%;
+  width: 35%;
 }
 /* <--- End of styles for character info card ---> */
 
