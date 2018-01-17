@@ -121,7 +121,7 @@ input[type=text] {
 }
 
 /* <--- Media query for Smaller devices ---> */
-@media(max-width: 700px) {
+@media(max-width: 780px) {
   .desktop {
     display: none;
   }
@@ -142,7 +142,7 @@ input[type=text] {
   }
 
   .search-card {
-    width: 75%;
+    width: 70%;
     margin-left: 2em;
   }
 
@@ -155,7 +155,7 @@ input[type=text] {
   }
 
   .char-card {
-    width: 75%;
+    width: 70%;
     margin-left: 2em;
   }
 
