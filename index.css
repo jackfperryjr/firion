@@ -41,18 +41,12 @@ h1 {
   vertical-align: top;
 }
 
-.desktop img {
-  display: inline-block;
-  margin-top: 8px;
-  height: auto;
-  width: 38%; 
-}
-
 .header-logo {
   display: inline-block;
+  padding-top: 15px;
   height: auto;
-  width: 5%;
-  vertical-align: top;
+  width: 25px;
+  vertical-align: middle;
 }
 /* <--- End of styles for main body html and content ---> */
 
@@ -81,13 +75,6 @@ input[type=text] {
   margin-left: 5em;
   transition: all .2s ease-in-out;
   overflow: hidden;
-}
-
-.search-logo {
-  padding-right: 8px;
-  height: auto;
-  width: 4%;
-  vertical-align: middle;
 }
 /* <--- End of styles for search box ---> */
 
@@ -138,9 +125,19 @@ input[type=text] {
     display: none;
   }
 
+  .header-logo {
+    padding-top: 3px;
+    height: auto;
+    width: 25px;
+    vertical-align: middle;
+  }
+
+  h1 {
+    letter-spacing: 10px;
+  }
   .mobile {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .search-card {
@@ -161,13 +158,25 @@ input[type=text] {
     margin-left: 2em;
   }
 
+  .char-info {
+    margin: 2%;
+  }
+
+  .description {
+    margin: 2%;
+  }
+
+  .char-image img {
+    padding: 2%;
+  }
+
   #main-content {
     width: 100%;
     margin-top: 3em;
   }
 
   .header {
-    margin-top: 3em;
+    margin-top: 2em;
   }
 }
 /* <--- End of media query --->*/

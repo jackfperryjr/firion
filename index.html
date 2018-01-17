@@ -14,12 +14,12 @@
         <div class="header">
         <img class="header-logo" src="http://logosolusa.com/wp-content/uploads/parser/Final-Fantasy-IX-Logo-1.png">
         <h1 class="desktop"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"> Compendium</h1>
-        <h1 class="mobile"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"> </h1>
+        <h1 class="mobile"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"><br>Compendium</h1>
     </div>
     <div id="main-content">
         <div ng-controller="charControl">
             <div class="search-card">
-            <h2><img class="search-logo" src="https://www.shareicon.net/download/2015/12/20/690488_folder_512x512.png">enter character: <input type="text" ng-model="search"></h2>
+            <h2>enter character: <input type="text" ng-model="search"></h2>
             </div>
             <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search:strict) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
                 <h2>{{character.name}}</h2>
