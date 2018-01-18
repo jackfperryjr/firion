@@ -12,44 +12,44 @@
     </head>
     <body ng-app="charApp">
         <div class="header">
-        <img class="header-logo" src="http://logosolusa.com/wp-content/uploads/parser/Final-Fantasy-IX-Logo-1.png">
-        <h1 class="desktop"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"> Compendium</h1>
-        <h1 class="mobile"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"><br>Compendium</h1>
-    </div>
-    <div id="main-content">
-        <div ng-controller="charControl">
-            <div class="search-card">
-            <h2>enter a character: <input type="text" ng-model="search"></h2>
-            </div>
-            <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search:strict) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
-                <h2>{{character.name}}</h2>
-                <div class="char-info">
-                    <h5>Age: {{character.age}}</h5>
-                    <h5>Race: {{character.race}}</h5>
-                    <h5>Gender: {{character.gender}}</h5>
-                    <h5>Height: {{character.height}}</h5>
-                    <h5>Weight: {{character.weight}}</h5>
-                    <h5>Class: {{character.class}}</h5>
-                    <h5>Origin: {{character.origin}}</h5>
+            <img class="header-logo" src="http://logosolusa.com/wp-content/uploads/parser/Final-Fantasy-IX-Logo-1.png">
+            <h1 class="desktop"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"> Compendium</h1>
+            <h1 class="mobile"><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/8/86/Final_Fantasy_series_logo.png/revision/latest?cb=20151203003249"><br>Compendium</h1>
+        </div>
+        <div id="main-content">
+            <div ng-controller="charControl">
+                <div class="search-card">
+                    <h2>enter a character: <input type="text" ng-model="search"></h2>
                 </div>
-                <div class="char-image">
-                    <img ng-src="{{character.image}}">
+                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search:strict) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
+                    <h2>{{character.name}}</h2>
+                    <div class="char-info">
+                        <h5>Age: {{character.age}}</h5>
+                        <h5>Race: {{character.race}}</h5>
+                        <h5>Gender: {{character.gender}}</h5>
+                        <h5>Height: {{character.height}}</h5>
+                        <h5>Weight: {{character.weight}}</h5>
+                        <h5>Class: {{character.class}}</h5>
+                        <h5>Origin: {{character.origin}}</h5>
+                    </div>
+                    <div class="char-image">
+                        <img ng-src="{{character.image}}">
+                    </div>
+                    <h5 class="description">{{character.description}}</h5>
                 </div>
-                <h5 class="description">{{character.description}}</h5>
             </div>
         </div>
-    </div>
-    <img id="moogle" class="hvr-hang" 
-    src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
+        <img id="moogle" class="hvr-hang" 
+        src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
 
-    <!-- Below are alternate floater Moogle images -->
+        <!-- Below are some alternate floating Moogle images -->
 
-    <!-- <img id="moogle" class="hvr-hang" src="https://orig00.deviantart.net/dcac/f/2012/250/f/e/cute_moogle_by_negocio_plz-d5dw8o1.png" alt="Moogle"> -->
-        
-    <!-- <img id="moogle" class="hvr-hang" src="http://www.tonymear.com/MoogleUK/FFVI/GIFs/Mog_with_sword.gif" alt="Moogle"> -->
+        <!-- <img id="moogle" class="hvr-hang" src="https://orig00.deviantart.net/dcac/f/2012/250/f/e/cute_moogle_by_negocio_plz-d5dw8o1.png" alt="Moogle"> -->
+            
+        <!-- <img id="moogle" class="hvr-hang" src="http://www.tonymear.com/MoogleUK/FFVI/GIFs/Mog_with_sword.gif" alt="Moogle"> -->
 
-    <!-- ***************************************** -->
+        <!-- ***************************************** -->
 
-    <script src="index.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
