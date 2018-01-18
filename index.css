@@ -113,7 +113,7 @@ input[type=text] {
   padding-bottom: 2%;
   float: right;
   height: auto;
-  width: 35%;
+  width: 200px;
 }
 /* <--- End of styles for character info card ---> */
 
@@ -170,6 +170,7 @@ input[type=text] {
 
   .char-image img {
     padding: 2%;
+    width: 100px;
   }
 
   #main-content {
