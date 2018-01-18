@@ -19,7 +19,7 @@
     <div id="main-content">
         <div ng-controller="charControl">
             <div class="search-card">
-            <h2>enter character: <input type="text" ng-model="search"></h2>
+            <h2>enter a character: <input type="text" ng-model="search"></h2>
             </div>
             <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search:strict) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
                 <h2>{{character.name}}</h2>
