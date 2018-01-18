@@ -5,7 +5,8 @@ var app = angular.module('charApp', []);
 app.controller('charControl', function($scope, $http) {
    $http.get("characters.json")
      .then(function(response) {
-	    $scope.characters = response.data;
-     });
+	      $scope.characters = response.data;
+      });
     $scope.quantity = 1;
 });
+
