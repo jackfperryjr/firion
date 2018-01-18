@@ -19,9 +19,9 @@
         <div id="main-content">
             <div ng-controller="charControl">
                 <div class="search-card">
-                    <h2>enter a character: <input type="text" ng-model="search"></h2>
+                    <h2>enter a character: <input type="text" ng-model="search.name"></h2>
                 </div>
-                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search:strict) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
+                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search) | limitTo:quantity" ng-hide="filteredData.length==characters.length">
                     <h2>{{character.name}}</h2>
                     <div class="char-info">
                         <h5>Age: {{character.age}}</h5>
@@ -35,6 +35,7 @@
                     <div class="char-image">
                         <img ng-src="{{character.image}}">
                     </div>
+                    <h5 class="description">{{character.quote}}</h5>
                     <h5 class="description">{{character.description}}</h5>
                 </div>
             </div>
@@ -51,5 +52,6 @@
         <!-- ***************************************** -->
 
         <script src="index.js"></script>
+        <footer>created by Jack F. Perry, Jr.</footer>
     </body>
 </html>
