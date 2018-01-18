@@ -7,7 +7,7 @@ html {
 body {
   background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") bottom center no-repeat, rgb(220,220,220);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   color: white;
   font-family: "Raleway", serif;
 }
