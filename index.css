@@ -5,7 +5,10 @@ html {
 }
 
 body {
-  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") bottom center no-repeat, rgb(220,220,220);
+  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center bottom no-repeat fixed, rgb(0,0,0);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center;
   color: white;
