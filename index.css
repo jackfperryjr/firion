@@ -6,11 +6,6 @@ html {
 
 body {
   background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center bottom no-repeat fixed, rgb(0,0,0);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
   color: white;
   font-family: "Raleway", serif;
 }
@@ -143,6 +138,10 @@ footer {
 @media(max-width: 780px) {
   .desktop {
     display: none;
+  }
+
+  body {
+    background: url("http://kb4images.com/images/final-fantasy-wallpaper-hd/37920154-final-fantasy-wallpaper-hd.jpg") center bottom no-repeat fixed;
   }
 
   .header-logo {
