@@ -141,7 +141,7 @@ footer {
   }
 
   body {
-    background: url("http://kb4images.com/images/final-fantasy-wallpaper-hd/37920154-final-fantasy-wallpaper-hd.jpg") center bottom no-repeat fixed;
+    background: url("http://kb4images.com/images/final-fantasy-wallpaper-hd/37920154-final-fantasy-wallpaper-hd.jpg") center bottom no-repeat fixed, rgb(0,0,0);
   }
 
   .header-logo {
