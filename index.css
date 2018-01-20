@@ -1,12 +1,17 @@
 /* <--- Styles for main body html and content ---> */
+.desktop {
+  display: none;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
 }
 
 body {
-  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center bottom no-repeat fixed, rgb(0,0,0);
-  color: white;
+  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center center no-repeat fixed, rgb(0, 0, 0);
+  background-size: cover;
+  color: rgb(255,255,255);
   font-family: "Raleway", serif;
 }
 
@@ -19,6 +24,7 @@ body {
 }
 
 .header {
+  margin-top: 2em;
   text-align: left;
 }
 
@@ -29,31 +35,30 @@ body {
 }
 
 h1 {
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px rgb(0,0,0);
   display: inline-block;
-  font-size: 3em;
-  line-height: 1.5em;
-  margin: 0;
-  margin-left: 10px;
+  font-size: 1em;
+  line-height: 1em;
+  margin-left: 1em;
   vertical-align: top;
-  letter-spacing: 8px;
+  letter-spacing: 10px;
 }
 
 .header-logo {
   display: inline-block;
-  padding-top: 15px;
+  margin-top: 0.5em;
   height: auto;
   width: 25px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 /* <--- End of styles for main body html and content ---> */
 
 /* <--- Styles for search box ---> */
 input[type=text] {
-  background: rgba(255, 255, 255, .0);
+  background: rgba(255,255,255,.0);
   border: none;
-  border-bottom: 2px solid black;
-  font-size: 16pt;
+  border-bottom: 2px solid rgb(0,0,0);
+  font-size: 10pt;
   height: 30px;
   width: 200px;
   padding-left: 5px;
@@ -61,16 +66,16 @@ input[type=text] {
 
 .search-card:hover {
   transform: scale(1.05);
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 10px rgb(0,0,0);
 }
 
 .search-card {
-  width: 50%;
-  background: rgba(255, 255, 255, .7);
-  color: black;
+  width: 100%;
+  background: rgba(255,255,255,.7);
+  color: rgb(0,0,0);
   border-radius: 5px;
   margin-top: 1em;
-  margin-left: 5em;
+  margin-left: 2em;
   transition: all .2s ease-in-out;
   overflow: hidden;
 }
@@ -78,16 +83,16 @@ input[type=text] {
 
 /* <--- Styles for character info card ---> */
 .char-card {
-  width: 50%;
-  background: rgba(255, 255, 255, 255);
-  color: black;
+  width: 100%;
+  background: rgb(255,255,255);
+  color: rgb(0,0,0);
   border-radius: 5px;
   margin-top: 1em;
   margin-bottom: 5em;
-  margin-left: 5em;
+  margin-left: 2em;
   transition: all .2s ease-in-out;
   overflow: hidden;
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 10px rgb(0,0,0);
 }
 
 .char-info {
@@ -105,22 +110,28 @@ input[type=text] {
   line-height: 14px;
 }
 
-.char-image img {
-  padding-top: 2%;
-  padding-right: 10%;
-  padding-bottom: 2%;
-  float: right;
+.char-image {
+  display: inline-block;
+  margin: 1em;
   height: auto;
-  width: 200px;
+  width: 100px;
+}
+
+.char-image img {
+  display: block;
+  float: right;
+  height: 100%;
+  width: 100%;
 }
 /* <--- End of styles for character info card ---> */
 
+/* <--- Styles for footer ---> */
 footer {
   position: fixed;
   bottom: 0;
   height: auto;
   width: 100%;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
   display: inline-block;
   font-size: 7pt;
   text-align: center;
@@ -130,77 +141,7 @@ footer {
   vertical-align: middle;
   letter-spacing: 5px;
 }
-
-.mobile {
-  display: none;
-}
-
-/* <--- Media query for Smaller devices ---> */
-@media(max-width: 780px) {
-  .desktop {
-    display: none;
-  }
-
-  body {
-    background: url("http://kb4images.com/images/final-fantasy-wallpaper-hd/37920154-final-fantasy-wallpaper-hd.jpg") center bottom no-repeat fixed, rgb(0,0,0);
-  }
-
-  .header-logo {
-    padding-top: 3px;
-    height: auto;
-    width: 25px;
-    vertical-align: middle;
-  }
-
-  h1 {
-    letter-spacing: 10px;
-  }
-  .mobile {
-    display: inline-block;
-    font-size: 1em;
-  }
-
-  .search-card {
-    width: 80%;
-    margin-left: 2em;
-  }
-
-  input[type=text] {
-    border-bottom: 2px solid black;
-    font-size: 10pt;
-    height: 30px;
-    width: 200px;
-    padding-left: 5px;
-  }
-
-  .char-card {
-    width: 80%;
-    margin-left: 2em;
-  }
-
-  .char-info {
-    margin: 2%;
-  }
-
-  .description {
-    margin: 2%;
-  }
-
-  .char-image img {
-    padding: 2%;
-    width: 100px;
-  }
-
-  #main-content {
-    width: 100%;
-    margin-top: 3em;
-  }
-
-  .header {
-    margin-top: 2em;
-  }
-}
-/* <--- End of media query --->*/
+/* <--- End of styles for footer ---> */
 
 /* <--- Animation to control the floating moogle ---> */
 @-webkit-keyframes hvr-hang {
@@ -276,3 +217,60 @@ footer {
   animation-direction: normal, alternate;
 }
 /* <--- End of animation for floating moogle --->*/
+
+/* <--- Media query for desktop view ---> */
+@media(min-width: 700px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: inline-block;
+  }
+
+  .desktop img {
+    height: auto;
+    width: 7em;
+  }
+
+  h1 {
+    margin-left: 0.5em;
+    font-size: 3em;
+    letter-spacing: 10px;
+  }
+
+  .header {
+    margin-top: 1em;
+  }
+
+  .header-logo {
+    margin-top: 1em;
+    width: 35px;
+    padding-top: 10px;
+    padding-left: 1.5em;
+  }
+
+  .search-card {
+    width: 50%;
+    margin-left: 5em;
+  }
+
+  input[type=text] {
+    font-size: 16pt;
+  }
+
+  .char-card {
+    width: 50%;
+    margin-left: 5em;
+  }
+
+  .char-image {
+    width: 200px;
+  }
+
+  #main-content {
+    width: 80%;
+    margin-top: 3em;
+  }
+}
+/* <--- End of media query --->*/
