@@ -96,7 +96,7 @@ input[type=text] {
 }
 
 .char-info {
-  margin: 1em;
+  margin: 5px;
   text-align: left;
   float: left;
   line-height: 1px;
@@ -104,7 +104,7 @@ input[type=text] {
 }
 
 .description {
-  margin: 1em;
+  margin: 5px;
   text-align: left;
   float: left;
   line-height: 14px;
@@ -112,14 +112,16 @@ input[type=text] {
 
 .char-image {
   display: inline-block;
-  margin: 1em;
+  float: right;
+  margin: 5px;
   height: auto;
   width: 100px;
 }
 
 .char-image img {
-  display: block;
+  display: inline-block;
   float: right;
+  margin: 5px;
   height: 100%;
   width: 100%;
 }
