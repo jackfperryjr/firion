@@ -78,13 +78,13 @@ input[type=text] {
 
 /* <--- Styles for character info card ---> */
 .char-card {
-  width: 100%;
+  width: 75%;
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
   margin-top: 1em;
-  margin-bottom: 5em;
-  margin-left: 2em;
+  margin-right: auto;
+  margin-left: auto;
   transition: all .2s ease-in-out;
   overflow: hidden;
   box-shadow: 2px 2px 10px rgb(0,0,0);
