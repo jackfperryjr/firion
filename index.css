@@ -78,7 +78,7 @@ input[type="text"] {
 
 /* <--- Styles for character info card ---> */
 .char-card {
-  width: 80%;
+  width: 90%;
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
