@@ -44,6 +44,11 @@ h1 {
   letter-spacing: 10px;
 }
 
+.mobile img {
+  width: 200px;
+  height: auto;
+}
+
 .header-logo {
   display: inline-block;
   margin-top: 0.5em;
@@ -227,7 +232,7 @@ footer {
 
   .desktop img {
     height: auto;
-    width: 7em;
+    width: 400px;
   }
 
   h1 {
