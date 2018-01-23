@@ -198,7 +198,7 @@ footer {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
   animation-name: hvr-hang-sink, hvr-hang;
   -webkit-animation-duration: 1s, 2s;
   animation-duration: 1s, 2s;
