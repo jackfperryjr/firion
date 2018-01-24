@@ -8,6 +8,12 @@ html {
   box-sizing: border-box;
 }
 
+header {
+  position: fixed;
+  top: 5px;
+  left: 50px;
+}
+
 body {
   background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center center no-repeat fixed, rgb(0, 0, 0);
   background-size: cover;
@@ -23,14 +29,10 @@ body {
   z-index: -1;
 }
 
-.header {
-  margin-top: 2em;
-  text-align: left;
-}
-
 #main-content {
   text-align: center; 
   width: 100%;  
+  padding-top: 7em;
   margin-bottom: 1em;
 }
 
@@ -48,14 +50,6 @@ h1 {
   width: 200px;
   height: auto;
 }
-
-.header-logo {
-  display: inline-block;
-  margin-top: 0.5em;
-  height: auto;
-  width: 35px;
-  vertical-align: top;
-}
 /* <--- End of styles for main body html and content ---> */
 
 /* <--- Styles for search box ---> */
@@ -70,6 +64,9 @@ input[type="text"] {
 }
 
 .search-card {
+  position: fixed;
+  top: 100px;
+  left: 3em;
   width: 70%;
   background: rgba(255,255,255,.7);
   color: rgb(0,0,0);
@@ -87,7 +84,7 @@ input[type="text"] {
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
-  margin-top: 1em;
+  margin-top: 6em;
   margin-right: auto;
   margin-left: auto;
   transition: all .2s ease-in-out;
@@ -235,27 +232,20 @@ footer {
     width: 400px;
   }
 
+  header {
+    left: 65px;
+  }
+
   h1 {
     margin-left: 0.5em;
     font-size: 3em;
     letter-spacing: 10px;
   }
 
-  .header {
-    margin-top: 1em;
-    margin-bottom: 0;
-  }
-
-  .header-logo {
-    margin-top: 1em;
-    width: 45px;
-    padding-top: 10px;
-    padding-left: 1.5em;
-  }
-
   .search-card {
+    top: 170px;
+    left: 5em;
     width: 50%;
-    margin-left: 5em;
   }
 
   input[type=text] {
@@ -265,7 +255,7 @@ footer {
   }
 
   .char-card {
-    width: 80%;
+    width: 60%;
     margin-left: 5em;
   }
 
@@ -276,6 +266,8 @@ footer {
   #main-content {
     width: 80%;
     margin-top: 0;
+    padding-top: 10em;
+
   }
 }
 /* <--- End of media query --->*/
