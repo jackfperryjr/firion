@@ -280,7 +280,11 @@ footer {
     width: 80%;
     margin-top: 0;
     padding-top: 10em;
+  }
 
+  footer {
+    right: 8em;
+    text-align: right;
   }
 }
 /* <--- End of media query --->*/
