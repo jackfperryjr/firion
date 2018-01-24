@@ -260,12 +260,20 @@ footer {
 
   .char-card {
     width: 60%;
-    margin-left: 5em;
-    margin-bottom: 5em;
+    margin: 5em;
+  }
+
+  .char-info {
+    margin-left: 3em;
+    letter-spacing: 5px;
   }
 
   .char-image {
     width: 200px;
+  }
+
+  .char-image img {
+    margin-right: 3em;
   }
 
   #main-content {
