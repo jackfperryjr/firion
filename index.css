@@ -17,6 +17,7 @@ header {
 body {
   background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center center no-repeat fixed, rgb(0, 0, 0);
   background-size: cover;
+  background-attachment: fixed;
   color: rgb(255,255,255);
   font-family: "Raleway", serif;
 }
@@ -270,6 +271,11 @@ footer {
 
   .char-image {
     width: 200px;
+  }
+
+  .char-card img:hover {
+    transform: scale(1.10);
+    transition: all .2s ease-in-out;
   }
 
   .char-image img {
