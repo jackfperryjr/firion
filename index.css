@@ -20,6 +20,8 @@ body {
   background-attachment: fixed;
   color: rgb(255,255,255);
   font-family: "Raleway", serif;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #moogle {
