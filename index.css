@@ -22,7 +22,7 @@ body {
   font-family: "Raleway", serif;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  z-index: -2;
+  z-index: -10;
 }
 
 #moogle {
