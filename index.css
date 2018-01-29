@@ -4,6 +4,9 @@
 }
 
 html {
+  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center center no-repeat fixed, rgb(0, 0, 0);
+  background-size: cover;
+  background-attachment: fixed;
   height: 100%;
   box-sizing: border-box;
 }
@@ -15,9 +18,7 @@ header {
 }
 
 body {
-  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") center center no-repeat fixed, rgb(0, 0, 0);
-  background-size: cover;
-  background-attachment: fixed;
+
   color: rgb(255,255,255);
   font-family: "Raleway", serif;
   overflow: scroll;
