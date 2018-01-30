@@ -5,3 +5,7 @@ This is a compendium of Final Fantasy characters from all of the many, many game
 (Although, not yet complete.)
 ```
 
+# chocoDex
+```
+I've incorporated the chocoDex application into the compendium application for fun!
+```
