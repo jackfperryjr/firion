@@ -1,3 +1,6 @@
+
+<!-- Created by Jack F. Perry, Jr. -->
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -20,7 +23,7 @@
                 <div class="search-card">
                     <h2>enter a character: <input type="text" ng-model="search.name" placeholder="search..."></h2>
                 </div>
-                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:exact) | limitTo:1" ng-hide="filteredData.length==characters.length">
+                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:1" ng-hide="filteredData.length==characters.length">
                     <h2>{{character.name}}</h2>
                     <div class="char-info">
                         <h5>Age: {{character.age}}</h5>
