@@ -1,4 +1,7 @@
-/* <--- Styles for main body html and content ---> */
+
+/* <--- Created by Jack F. Perry, Jr. ---> */
+
+/* <--- Styles for main body html and content (mobile first) ---> */
 .desktop {
   display: none;
 }
@@ -249,10 +252,7 @@ footer {
     width: 400px;
   }
 
-  .chocobutton {
-    width: 200px;
-  }
-
+  /* <--- Styles for chocoDex buttons ---> */
   #previous {
     border: none;
     background: rgba(255,255,255,.0);
@@ -287,8 +287,9 @@ footer {
     bottom: 16%;
     right: 18%;
   }
+  /* <--- End of styles for chocoDex buttons ---> */
 
-  /* <--- Styles for character info card ---> */
+  /* <--- Styles for chocobo info card ---> */
   #choco-card {
     position: fixed;
     top: 20%;
@@ -331,6 +332,7 @@ footer {
   }
   /* <--- End of styles for character info card ---> */
 
+  /* <--- Styles for changing to desktop layout ---> */
   header {
     left: 65px;
   }
