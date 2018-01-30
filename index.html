@@ -18,7 +18,7 @@
         <div id="main-content">
             <div ng-controller="charControl">
                 <div class="search-card">
-                    <h2>enter a character: <input type="text" ng-model="search.name"></h2>
+                    <h2>enter a character: <input type="text" ng-model="search.name" placeholder="search..."></h2>
                 </div>
                 <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:exact) | limitTo:1" ng-hide="filteredData.length==characters.length">
                     <h2>{{character.name}}</h2>
@@ -38,9 +38,35 @@
                     {{character.description}}</h5>
                 </div>
             </div>
+            <div id="chocodex" class="desktop" ng-controller="chocoControl">
+                <div id="choco-card" class="hvr-hang" ng-show="chocodex" ng-repeat="chocobo in filteredData = (chocobos | filter:search:strict) | limitTo:1">
+                    <div class="choco-image" ng-show="chocoimage" ng-click="showInfo()">
+                        <img class="mobile" ng-src="{{chocobos[current].image}}">
+                        <img class="desktop" ng-src="{{chocobos[current].image}}">
+                        <h3 class="mobile">tap for more info!</h3>
+                        <h3 class="desktop">click for more info!</h3>
+                    </div>
+                    <div class="choco-info" ng-show="chocoinfo" ng-click="showImage()">
+                        <h5>id: {{chocobos[current].id}}</h5>
+                        <h5>type: {{chocobos[current].color}} chocobo</h5>
+                        <h5>{{chocobos[current].description}}</h5>
+                        <h3 class="mobile">tap to go back!</h3>
+                        <h3 class="desktop">click to go back!</h3>
+                    </div>
+                </div>
+                <button title="click for next chocobo!" id="next" ng-show="chocobutton" ng-click="next()">&#x21E8;</button>
+                <button title="click for previous chocobo!" id="previous" ng-show="chocobutton" ng-click="previous()">&#x21E6;</button>
+                <div ng-show="moogle" class="desktop">
+                    <img title="Click me for the chocoDex!" ng-click="chocoDex()" id="moogle" class="hvr-hang" 
+                    src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
+                </div>
+                <button title="click to close the chocoDex!" id="back" ng-show="chocobutton" ng-click="back()">&#9633;</button>
+            </div>
         </div>
-        <img id="moogle" class="hvr-hang" 
-        src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
+        <div class="mobile">
+            <img id="moogle" class="hvr-hang" 
+            src="https://orig00.deviantart.net/af4b/f/2014/328/b/1/final_fantasy_moogle_by_joeoiii-d87lb2j.png" alt="Moogle">
+        </div>
         <script src="index.js"></script>
         <footer>created by Jack F. Perry, Jr.</footer>
     </body>
