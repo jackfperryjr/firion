@@ -7,6 +7,7 @@ html {
   height: 100%;
   color: rgb(255,255,255);
   box-sizing: border-box;
+  font-family: "Raleway", serif;
 }
 
 header {
@@ -26,7 +27,6 @@ body:before {
   z-index: -10;
   background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") no-repeat center center, rgb(255,255,255);
   background-attachment: fixed;
-  font-family: "Raleway", serif;
   overflow: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -72,7 +72,7 @@ input[type="text"] {
   border-bottom: 2px solid rgb(0,0,0);
   font-size: 16pt;
   height: 20px;
-  width: 150px;
+  width: 100px;
   padding-left: 5px;
 }
 
@@ -129,6 +129,7 @@ input[type="text"] {
   margin: 5px;
   height: auto;
   width: 100px;
+  transition: opacity 0.3s;
 }
 
 .char-image img {
@@ -234,7 +235,7 @@ footer {
 /* <--- End of animation for floating moogle --->*/
 
 /* <--- Media query for desktop view ---> */
-@media(min-width: 700px) {
+@media(min-width: 815px) {
   .mobile {
     display: none;
   }
@@ -247,6 +248,88 @@ footer {
     height: auto;
     width: 400px;
   }
+
+  .chocobutton {
+    width: 200px;
+  }
+
+  #previous {
+    border: none;
+    background: rgba(255,255,255,.0);
+    color: rgb(255,255,255);
+    font-size: 5em;
+    text-shadow: 4px 4px 4px rgb(0,0,0);
+    position: fixed;
+    transition: .5s ease;
+    bottom: 15%;
+    left: 67%;
+  }  
+
+  #next {
+    border: none;
+    background: rgba(255,255,255,.0);
+    color: rgb(255,255,255);
+    font-size: 5em; 
+    text-shadow: 4px 4px 4px rgb(0,0,0);  
+    position: fixed;
+    transition: .5s ease;
+    bottom: 15%;
+    right: 7%;     
+  }
+
+  #back {
+    border: none;
+    background: rgba(255,255,255,.0);
+    color: rgb(255,255,255);
+    font-size: 4em;
+    text-shadow: 4px 4px 4px rgb(0,0,0);  
+    position: fixed;
+    bottom: 16%;
+    right: 18%;
+  }
+
+  /* <--- Styles for character info card ---> */
+  #choco-card {
+    position: fixed;
+    top: 20%;
+    right: 11.5%;
+    width: 250px;
+    height: 300px;
+    background: rgba(255,255,255,.5);
+    color: rgb(0,0,0);
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    margin-top: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+  }
+
+  .choco-image {
+    position: relative;
+    height: auto;
+    width: 100%;
+    right: 2%;
+    bottom: 5%;
+  }
+
+  .choco-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .choco-info h5 {
+    text-align: left;
+    line-height: 12px;
+    margin: 2em;
+  }
+
+  .choco-info h3 {
+    text-align: center;
+    margin: 1em;
+  }
+  /* <--- End of styles for character info card ---> */
 
   header {
     left: 65px;
