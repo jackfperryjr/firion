@@ -332,17 +332,20 @@ footer {
   }
 
   .choco-info {
-    margin-top: 5em;
-    margin-right: 2em;
-    margin-left: 2em;
+    position: relative;
+    margin-top: 25%;
+    margin-right: 5%;
+    margin-left: 5%;
   }
 
   .choco-info h5 {
+    position: relative;
     text-align: center;
     line-height: 12px;
   }
 
   .choco-info h3 {
+    position: relative;
     text-align: center;
   }
   /* <--- End of styles for character info card ---> */
