@@ -255,37 +255,40 @@ footer {
   /* <--- Styles for chocoDex buttons ---> */
   #previous {
     border: none;
-    background: rgba(255,255,255,.0);
-    color: rgb(255,255,255);
-    font-size: 5em;
-    text-shadow: 4px 4px 4px rgb(0,0,0);
+    border-radius: 5px;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-size: 2em;
+    box-shadow: 4px 4px 4px rgb(0,0,0);
     position: fixed;
     transition: .5s ease;
     bottom: 15%;
-    left: 67%;
+    right: 23.5%;
   }  
 
   #next {
     border: none;
-    background: rgba(255,255,255,.0);
-    color: rgb(255,255,255);
-    font-size: 5em; 
-    text-shadow: 4px 4px 4px rgb(0,0,0);  
+    border-radius: 5px;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-size: 2em; 
+    box-shadow: 4px 4px 4px rgb(0,0,0);  
     position: fixed;
     transition: .5s ease;
     bottom: 15%;
-    right: 7%;     
+    right: 13.5%;     
   }
 
   #back {
     border: none;
-    background: rgba(255,255,255,.0);
-    color: rgb(255,255,255);
-    font-size: 4em;
-    text-shadow: 4px 4px 4px rgb(0,0,0);  
+    border-radius: 5px;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-size: 2em;
+    box-shadow: 4px 4px 4px rgb(0,0,0);  
     position: fixed;
-    bottom: 16%;
-    right: 18%;
+    bottom: 15%;
+    right: 18.5%;
   }
   /* <--- End of styles for chocoDex buttons ---> */
 
@@ -295,7 +298,7 @@ footer {
     background: rgb(255,255,255);
     color: rgb(0,0,0);
     border: 1px solid rgb(0,0,0);
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     padding: 3px 10px;
   }
@@ -307,7 +310,7 @@ footer {
     right: 9%;
     width: 22%;
     height: 55%;
-    background: rgba(255,255,255,.7);
+    background: rgb(255,255,255);
     color: rgb(0,0,0);
     border-radius: 5px;
     box-shadow: 4px 4px 10px rgb(0,0,0);
