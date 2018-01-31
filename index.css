@@ -76,7 +76,7 @@ input[type="text"] {
   font-size: 16pt;
   height: 20px;
   width: 200px;
-  padding-left: 5px;
+  padding-left: 2px;
 }
 
 .search-card {
@@ -304,7 +304,7 @@ footer {
   #choco-card {
     position: fixed;
     top: 10%;
-    right: 9.5%;
+    right: 9%;
     width: 22%;
     height: 55%;
     background: rgba(255,255,255,.7);
@@ -371,12 +371,12 @@ footer {
     font-size: 16pt;
     height: 30px;
     width: 250px;
-    padding-left: 5px;
   }
 
   .char-card {
     width: 60%;
     margin: 5em;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
   }
 
   .char-info {
