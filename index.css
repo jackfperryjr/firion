@@ -256,7 +256,7 @@ footer {
   #previous {
     border: none;
     border-radius: 5px;
-    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.7);
     color: rgb(0,0,0);
     font-size: 2em;
     box-shadow: 4px 4px 4px rgb(0,0,0);
@@ -269,7 +269,7 @@ footer {
   #next {
     border: none;
     border-radius: 5px;
-    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.7);
     color: rgb(0,0,0);
     font-size: 2em; 
     box-shadow: 4px 4px 4px rgb(0,0,0);  
@@ -282,13 +282,28 @@ footer {
   #back {
     border: none;
     border-radius: 5px;
-    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.7);
     color: rgb(0,0,0);
     font-size: 2em;
     box-shadow: 4px 4px 4px rgb(0,0,0);  
     position: fixed;
     bottom: 15%;
     right: 18.5%;
+  }
+
+  #previous:hover {
+    transform: scale(1.10);
+    transition: all .2s ease-in-out;
+  }
+
+  #next:hover {
+    transform: scale(1.10);
+    transition: all .2s ease-in-out;
+  }
+
+  #back:hover {
+    transform: scale(1.10);
+    transition: all .2s ease-in-out;
   }
   /* <--- End of styles for chocoDex buttons ---> */
 
@@ -404,6 +419,10 @@ footer {
     width: 80%;
     margin-top: 0;
     padding-top: 10em;
+  }
+
+  footer {
+    margin-bottom: 0;
   }
 }
 /* <--- End of media query --->*/
