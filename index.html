@@ -7,20 +7,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
         <title>Final Fantasy Compendium</title>
-        <link rel="icon" href="http://vignette1.wikia.nocookie.net/finalfantasy/images/f/fc/CT_Chocobo.png/revision/latest?cb=20151127205658">
+        <link rel="icon" href="https://pre00.deviantart.net/f7e9/th/pre/f/2015/145/c/2/moogle_charm_by_scruffycatxd-d8up59j.png">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Six+Caps|Special+Elite">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
     </head>
-    <body ng-app="fantasyApp">
+    <body ng-app="finalFantasyApp">
         <div id="background-image">
             <header>
                 <h1 class="desktop"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"> compendium</h1>
                 <h1 class="mobile"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"><br>compendium</h1>
             </header>
             <div id="main-content">
-                <div ng-controller="charControl">
+                <div ng-controller="characterController">
                     <div class="search-card">
                         <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
                     </div>
@@ -42,7 +42,7 @@
                         {{character.description}}</h5>
                     </div>
                 </div>
-                <div id="chocodex" class="desktop" ng-controller="chocoControl">
+                <div id="chocodex" class="desktop" ng-controller="chocoboController">
                     <div id="choco-card" class="hvr-hang" ng-show="chocodex" ng-repeat="chocobo in filteredData = (chocobos | filter:search:strict) | limitTo:1">
                         <div class="choco-image" ng-show="chocoimage" ng-click="showInfo()">
                             <img class="mobile" ng-src="{{chocobos[current].image}}">
