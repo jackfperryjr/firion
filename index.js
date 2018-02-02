@@ -34,11 +34,11 @@
 ());
 */
 
-// <--- Angular component to fetch and control my character list --->
-var app = angular.module('fantasyApp', []);
+// <--- Angular component to fetch and control character list --->
+var app = angular.module('finalFantasyApp', []);
 
 // <--- Angular controller to manage the characters --->
-app.controller('charControl', function($scope, $http) {
+app.controller('characterController', function($scope, $http) {
   $http.get('characters.json')
     .then(function(response) {
       $scope.characters = response.data;
@@ -46,7 +46,7 @@ app.controller('charControl', function($scope, $http) {
   });
 
 // <--- Angular controller to manage the chocobos --->
-app.controller('chocoControl', function($scope, $http) {
+app.controller('chocoboController', function($scope, $http) {
   $http.get('chocobos.json')
     .then(function(response) {
       $scope.chocobos = response.data;
