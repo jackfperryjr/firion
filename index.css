@@ -18,6 +18,7 @@ header {
   top: 5px;
   left: 50px;
 }
+
 .background-image {
   display: block;
   position: fixed;
@@ -25,7 +26,7 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -10;
+  z-index: -100;
   background: url("https://orig00.deviantart.net/aaca/f/2011/327/f/4/final_fantasy_xiii_2___lightning_wp_1080p_by_aedelwulf-d4h3ofp.jpg") no-repeat top center, rgb(255,255,255) !important;
   background-color: rgb(0,0,0);
   background-attachment: fixed !important;
@@ -36,28 +37,6 @@ header {
   -o-background-size: cover !important;
   background-size: cover !important;
 }
-
-/*
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url("https://orig00.deviantart.net/aaca/f/2011/327/f/4/final_fantasy_xiii_2___lightning_wp_1080p_by_aedelwulf-d4h3ofp.jpg") no-repeat top center, rgb(255,255,255) !important;
-  background-color: rgb(0,0,0);
-  background-attachment: fixed !important;
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
-}
-*/
 
 #floating-image {
   position: fixed;
@@ -130,7 +109,7 @@ input[type="text"] {
   transition: all .2s ease-in-out;
   overflow: hidden;
   box-shadow: 2px 2px 10px rgb(0,0,0);
-  z-index: 1;
+  z-index: 1000;
 }
 
 .char-info {
@@ -274,7 +253,7 @@ footer {
     width: 400px;
   }
 
-  body:before {
+  .background-image {
     background: url("https://orig00.deviantart.net/aaca/f/2011/327/f/4/final_fantasy_xiii_2___lightning_wp_1080p_by_aedelwulf-d4h3ofp.jpg") no-repeat center center rgb(255,255,255);
   }
 
@@ -436,8 +415,9 @@ footer {
 
   .char-card {
     width: 60%;
-    margin: 5em;
+    margin: 6em;
     box-shadow: 4px 4px 10px rgb(0,0,0);
+    z-index: 10;
   }
 
   .char-info {

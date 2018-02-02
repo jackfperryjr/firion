@@ -15,64 +15,64 @@
     </head>
     <body ng-app="fantasyApp">
         <div class="background-image">
-        <header>
-            <h1 class="desktop"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"> compendium</h1>
-            <h1 class="mobile"><img src="https://vignette2.wikia.nocookie.net/lapis/images/2/2c/Final_Fantasy_logo_white.png/revision/latest?cb=20160223164115"><br>compendium</h1>
-        </header>
-        <div id="main-content">
-            <div ng-controller="charControl">
-                <div class="search-card">
-                    <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
+            <header>
+                <h1 class="desktop"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"> compendium</h1>
+                <h1 class="mobile"><img src="https://vignette2.wikia.nocookie.net/lapis/images/2/2c/Final_Fantasy_logo_white.png/revision/latest?cb=20160223164115"><br>compendium</h1>
+            </header>
+            <div id="main-content">
+                <div ng-controller="charControl">
+                    <div class="search-card">
+                        <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
+                    </div>
+                    <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
+                        <h2>{{character.name}}</h2>
+                        <div class="char-info">
+                            <h5>Age: {{character.age}}</h5>
+                            <h5>Race: {{character.race}}</h5>
+                            <h5>Gender: {{character.gender}}</h5>
+                            <h5>Height: {{character.height}}</h5>
+                            <h5>Weight: {{character.weight}}</h5>
+                            <h5>Class: {{character.class}}</h5>
+                            <h5>Origin: {{character.origin}}</h5>
+                        </div>
+                        <div class="char-image">
+                            <img ng-src="{{character.image}}">
+                        </div>
+                        <h5 class="description">{{character.quote}}<br><br>
+                        {{character.description}}</h5>
+                    </div>
                 </div>
-                <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
-                    <h2>{{character.name}}</h2>
-                    <div class="char-info">
-                        <h5>Age: {{character.age}}</h5>
-                        <h5>Race: {{character.race}}</h5>
-                        <h5>Gender: {{character.gender}}</h5>
-                        <h5>Height: {{character.height}}</h5>
-                        <h5>Weight: {{character.weight}}</h5>
-                        <h5>Class: {{character.class}}</h5>
-                        <h5>Origin: {{character.origin}}</h5>
+                <div id="chocodex" class="desktop" ng-controller="chocoControl">
+                    <div id="choco-card" class="hvr-hang" ng-show="chocodex" ng-repeat="chocobo in filteredData = (chocobos | filter:search:strict) | limitTo:1">
+                        <div class="choco-image" ng-show="chocoimage" ng-click="showInfo()">
+                            <img class="mobile" ng-src="{{chocobos[current].image}}">
+                            <img class="desktop" ng-src="{{chocobos[current].image}}">
+                            <h3 class="mobile">tap for more info!</h3>
+                            <h3 class="desktop">click for more info!</h3>
+                        </div>
+                        <div class="choco-info" ng-show="chocoinfo" ng-click="showImage()">
+                            <h5>id: {{chocobos[current].id}}</h5>
+                            <h5>type: {{chocobos[current].color}} chocobo</h5>
+                            <h5>{{chocobos[current].description}}</h5>
+                            <h3 class="mobile">tap to go back!</h3>
+                            <h3 class="desktop">click to go back!</h3>
+                        </div>
                     </div>
-                    <div class="char-image">
-                        <img ng-src="{{character.image}}">
+                    <button title="click for next chocobo!" id="next" ng-show="chocobutton" ng-click="next()">&#x21E8;</button>
+                    <button title="click for previous chocobo!" id="previous" ng-show="chocobutton" ng-click="previous()">&#x21E6;</button>
+                    <div ng-show="floatingimage" class="desktop">
+                        <img title="click me for the chocoDex!" ng-click="chocoDex()" id="floating-image" class="hvr-hang" 
+                        src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
-                    <h5 class="description">{{character.quote}}<br><br>
-                    {{character.description}}</h5>
+                    <button title="click to close the chocoDex!" id="back" ng-show="chocobutton" ng-click="back()">&nbsp;X&nbsp;</button>
                 </div>
             </div>
-            <div id="chocodex" class="desktop" ng-controller="chocoControl">
-                <div id="choco-card" class="hvr-hang" ng-show="chocodex" ng-repeat="chocobo in filteredData = (chocobos | filter:search:strict) | limitTo:1">
-                    <div class="choco-image" ng-show="chocoimage" ng-click="showInfo()">
-                        <img class="mobile" ng-src="{{chocobos[current].image}}">
-                        <img class="desktop" ng-src="{{chocobos[current].image}}">
-                        <h3 class="mobile">tap for more info!</h3>
-                        <h3 class="desktop">click for more info!</h3>
-                    </div>
-                    <div class="choco-info" ng-show="chocoinfo" ng-click="showImage()">
-                        <h5>id: {{chocobos[current].id}}</h5>
-                        <h5>type: {{chocobos[current].color}} chocobo</h5>
-                        <h5>{{chocobos[current].description}}</h5>
-                        <h3 class="mobile">tap to go back!</h3>
-                        <h3 class="desktop">click to go back!</h3>
-                    </div>
-                </div>
-                <button title="click for next chocobo!" id="next" ng-show="chocobutton" ng-click="next()">&#x21E8;</button>
-                <button title="click for previous chocobo!" id="previous" ng-show="chocobutton" ng-click="previous()">&#x21E6;</button>
-                <div ng-show="floatingimage" class="desktop">
-                    <img title="click me for the chocoDex!" ng-click="chocoDex()" id="floating-image" class="hvr-hang" 
-                    src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
-                </div>
-                <button title="click to close the chocoDex!" id="back" ng-show="chocobutton" ng-click="back()">&nbsp;X&nbsp;</button>
+            <div class="mobile">
+                <img id="floating-image" class="hvr-hang" 
+                src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
             </div>
-        </div>
-        <div class="mobile">
-            <img id="floating-image" class="hvr-hang" 
-            src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
-        </div>
+            <footer>created by Jack F. Perry, Jr.</footer>
         </div>
         <script src="index.js"></script>
-        <footer>created by Jack F. Perry, Jr.</footer>
     </body>
 </html>
