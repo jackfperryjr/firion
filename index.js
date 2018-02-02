@@ -58,16 +58,16 @@ app.controller('chocoControl', function($scope, $http) {
       $scope.chocoinfo = false;
       $scope.chocoimage = false; 
       $scope.chocobutton = false;   
-      $scope.moogle = true;
+      $scope.floatingimage = true;
 
-      //<--- Function to hide moogle and show chocoDex --->
+      //<--- Function to hide floating image and show chocoDex --->
       $scope.chocoDex = function() {
         $scope.chocodex = true;
         $scope.chococard = true;
         $scope.chocoimage = true;
         $scope.chocobutton = true;
         $scope.chocoinfo = false;
-        $scope.moogle = false;
+        $scope.floatingimage = false;
       }
 
       // <--- Function to show chocobo info --->
@@ -95,11 +95,11 @@ app.controller('chocoControl', function($scope, $http) {
         }
       },
 
-      // <--- Function to hide the chocoDex and show the moogle --->
+      // <--- Function to hide the chocoDex and show the floating image --->
       $scope.back = function() {
         $scope.chocodex = false;
         $scope.chocobutton = false;
-        $scope.moogle = true;
+        $scope.floatingimage = true;
       }
   });
 });

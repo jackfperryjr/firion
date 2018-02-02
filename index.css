@@ -37,7 +37,7 @@ body:before {
   background-size: cover;
 }
 
-#moogle {
+#floating-image {
   position: fixed;
   top: 1em;
   right: 1em;
@@ -162,7 +162,7 @@ footer {
 }
 /* <--- End of styles for footer ---> */
 
-/* <--- Animation to control the floating moogle ---> */
+/* <--- Animation to control the floating image ---> */
 @-webkit-keyframes hvr-hang {
   0% {
     -webkit-transform: translateY(8px);
@@ -235,7 +235,7 @@ footer {
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
-/* <--- End of animation for floating moogle --->*/
+/* <--- End of animation for floating image --->*/
 
 /* <--- Media query for desktop view ---> */
 @media(min-width: 815px) {
@@ -331,7 +331,7 @@ footer {
     right: 9%;
     width: 22%;
     height: 55%;
-    background: rgb(255,255,255);
+    background: rgba(255,255,255,.7);
     color: rgb(0,0,0);
     border-radius: 5px;
     box-shadow: 4px 4px 10px rgb(0,0,0);
@@ -440,6 +440,11 @@ footer {
     width: 80%;
     margin-top: 0;
     padding-top: 10em;
+  }
+
+  #floating-image {
+    top: 2em;
+    right: 5em;
   }
 
   footer {
