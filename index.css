@@ -41,7 +41,7 @@ body:before {
   position: fixed;
   top: 1em;
   right: 1em;
-  width: 25%;
+  width: 20%;
   z-index: -1;
 }
 
@@ -445,6 +445,7 @@ footer {
   #floating-image {
     top: 2em;
     right: 5em;
+    width: 25%;
   }
 
   footer {
