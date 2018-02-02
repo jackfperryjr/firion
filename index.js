@@ -1,6 +1,7 @@
 
 // <--- Created by Jack F. Perry, Jr. --->
 
+/*
 // <--- Function to help position and style the tooltips --->
 (function() {
     var ID = "tooltip";
@@ -28,11 +29,13 @@
     });
     if(FOLLOW) { 
       $(document).on("mousemove", "." + CLS_ON, showAt); 
+    }
   }
-}());
+());
+*/
 
 // <--- Angular component to fetch and control my character list --->
-var app = angular.module('charApp', []);
+var app = angular.module('fantasyApp', []);
 
 // <--- Angular controller to manage the characters --->
 app.controller('charControl', function($scope, $http) {
