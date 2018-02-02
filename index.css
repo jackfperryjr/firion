@@ -28,7 +28,7 @@ body:before {
   width: 100%;
   height: 100%;
   z-index: -10;
-  background: url("https://www.thefinalfantasy.com/gallery/wallpaper/ff14/ffxiv-wallpaper-2.jpg") no-repeat center center, rgb(255,255,255);
+  background: url("https://orig00.deviantart.net/aaca/f/2011/327/f/4/final_fantasy_xiii_2___lightning_wp_1080p_by_aedelwulf-d4h3ofp.jpg") no-repeat center center, rgb(255,255,255);
   background-attachment: fixed;
   overflow: scroll;
   -webkit-background-size: cover;
@@ -252,6 +252,10 @@ footer {
     width: 400px;
   }
 
+  body:before {
+    background: url("https://orig00.deviantart.net/aaca/f/2011/327/f/4/final_fantasy_xiii_2___lightning_wp_1080p_by_aedelwulf-d4h3ofp.jpg") no-repeat center center rgb(255,255,255);
+  }
+
   /* <--- Styles for chocoDex buttons ---> */
   #previous {
     border: none;
@@ -292,21 +296,22 @@ footer {
   }
 
   #previous:hover {
-    transform: scale(1.10);
-    transition: all .2s ease-in-out;
+    transform: scale(1.15);
+    transition: all .3s ease-in-out;
   }
 
   #next:hover {
-    transform: scale(1.10);
-    transition: all .2s ease-in-out;
+    transform: scale(1.15);
+    transition: all .3s ease-in-out;
   }
 
   #back:hover {
-    transform: scale(1.10);
-    transition: all .2s ease-in-out;
+    transform: scale(1.15);
+    transition: all .3s ease-in-out;
   }
   /* <--- End of styles for chocoDex buttons ---> */
 
+  /*
   #tooltip {
     font-size: 1em;
     font-weight: bolder;
@@ -317,6 +322,7 @@ footer {
     box-shadow: 4px 4px 10px rgb(0,0,0);
     padding: 3px 10px;
   }
+  */
 
   /* <--- Styles for chocobo info card ---> */
   #choco-card {
@@ -344,6 +350,16 @@ footer {
     bottom: 7%;
   }
 
+  .choco-image:hover {
+    transform: scale(1.15);
+    transition: all 1.1s ease-in-out;
+  }
+
+  .choco-image img:hover {
+    transform: scale(1.30);
+    transition: all 1.1s ease-in-out;
+  }
+
   .choco-image img {
     width: 100%;
     height: auto;
@@ -354,6 +370,11 @@ footer {
     margin-top: 25%;
     margin-right: 5%;
     margin-left: 5%;
+  }
+
+  .choco-info:hover {
+    transform: scale(1.15);
+    transition: all 1.1s ease-in-out;    
   }
 
   .choco-info h5 {
@@ -406,9 +427,9 @@ footer {
     width: 200px;
   }
 
-  .char-card img:hover {
+  .char-image:hover {
     transform: scale(1.10);
-    transition: all .2s ease-in-out;
+    transition: all .7s ease-in-out;
   }
 
   .char-image img {
