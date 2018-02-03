@@ -157,7 +157,7 @@ footer {
   text-align: center;
   line-height: 1.5em;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   vertical-align: middle;
   letter-spacing: 5px;
 }
@@ -448,10 +448,6 @@ footer {
     top: 2em;
     right: 5em;
     width: 25%;
-  }
-
-  footer {
-    margin-bottom: 0;
   }
 }
 /* <--- End of media query --->*/
