@@ -116,6 +116,9 @@ app.controller('monsterController', function($scope, $http) {
 
       // <--- Setting initial statuses --->
       $scope.bestiary = false;
+      $scope.monstercard = false;
+      $scope.monsterimage = false;
+      $scope.monsterinfo = false;
       $scope.floatingimage = true;
       $scope.floatingimage2 = false;
 
@@ -125,7 +128,6 @@ app.controller('monsterController', function($scope, $http) {
         $scope.monstercard = false;
         $scope.monsterimage = true;
         $scope.monsterinfo = false; 
-        $scope.monsterbutton = true;
         $scope.floatingimage = false;
         $scope.floatingimage2 = true;        
       },
@@ -143,14 +145,14 @@ app.controller('monsterController', function($scope, $http) {
       },
 
       // <--- Function to close the bestiary --->
-      $scope.back = function() {
+      $scope.closeBestiary = function() {
         $scope.bestiary = false;
         $scope.monstercard = false;
         $scope.monsterinfo = false;
         $scope.monsterimage = false;
-        $scope.monsterbutton = false;
         $scope.floatingimage = true;
         $scope.floatingimage2 = false;
+        $scope.search = null;
       }
   });
 }); 

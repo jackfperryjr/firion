@@ -10,8 +10,8 @@
         <link rel="icon" href="https://pre00.deviantart.net/f7e9/th/pre/f/2015/145/c/2/moogle_charm_by_scruffycatxd-d8up59j.png">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Six+Caps|Special+Elite">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     </head>
 
   <!-- Start of Final Fantasy Compendium and Bestiary application -->
@@ -51,7 +51,7 @@
                 <!-- End of character controller -->
 
                 <!-- Start of monster controller -->
-                <div id="bestiary" class="desktop" ng-controller="monsterController">
+                <div class="desktop" ng-controller="monsterController">
                     <div class="monster-search" ng-show="bestiary">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
@@ -80,7 +80,7 @@
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
                     <div ng-show="floatingimage2" class="desktop">
-                    <img title="click me to close the bestiary!" ng-click="back()" id="floating-image2" class="hvr-hang" 
+                    <img title="click me to close the bestiary!" ng-click="closeBestiary()" id="floating-image2" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
                     <!-- End of monster controller -->
