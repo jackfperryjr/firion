@@ -45,6 +45,8 @@ app.controller('characterController', function($scope, $http) {
     });
   });
 
+/*****************************************************
+
 // <--- Angular controller to manage the chocobos --->
 app.controller('chocoboController', function($scope, $http) {
   $http.get('chocobos.json')
@@ -68,7 +70,7 @@ app.controller('chocoboController', function($scope, $http) {
         $scope.chocobutton = true;
         $scope.chocoinfo = false;
         $scope.floatingimage = false;
-      }
+      },
 
       // <--- Function to show chocobo info --->
       $scope.showInfo = function() {
@@ -103,3 +105,45 @@ app.controller('chocoboController', function($scope, $http) {
       }
   });
 });
+
+*****************************************************/ 
+
+// <--- Angular controller to manage the monsters --->
+app.controller('monsterController', function($scope, $http) {
+  $http.get('monsters.json')
+    .then(function(response) {
+      $scope.monsters = response.data;
+      $scope.bestiary = false;
+      $scope.floatingimage = true;
+      $scope.floatingimage2 = false;
+
+      $scope.showBestiary = function() {
+        $scope.bestiary = true;
+        $scope.monstercard = false;
+        $scope.monsterimage = true;
+        $scope.monsterinfo = false; 
+        $scope.monsterbutton = true;
+        $scope.floatingimage = false;
+        $scope.floatingimage2 = true;        
+      },
+
+      // <--- Function to show monster info --->
+      $scope.showMonsterInfo = function() {
+        $scope.monsterinfo = true; 
+        $scope.monsterimage = false; 
+      },
+
+      // <--- Function to show mosnter image --->
+      $scope.showMonsterImage = function() {
+        $scope.monsterimage = true;
+        $scope.monsterinfo = false;
+      },
+
+      $scope.back = function() {
+        $scope.bestiary = false;
+        $scope.monsterbutton = false;
+        $scope.floatingimage = true;
+        $scope.floatingimage2 = false;
+      }
+  });
+}); 
