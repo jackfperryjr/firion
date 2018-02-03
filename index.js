@@ -34,7 +34,7 @@
 ());
 */
 
-// <--- Angular component to fetch and control character list --->
+// <--- Initializing Angular component --->
 var app = angular.module('finalFantasyApp', []);
 
 // <--- Angular controller to manage the characters --->
@@ -113,10 +113,13 @@ app.controller('monsterController', function($scope, $http) {
   $http.get('monsters.json')
     .then(function(response) {
       $scope.monsters = response.data;
+
+      // <--- Setting initial statuses --->
       $scope.bestiary = false;
       $scope.floatingimage = true;
       $scope.floatingimage2 = false;
 
+      // <--- Function to open the bestiary --->
       $scope.showBestiary = function() {
         $scope.bestiary = true;
         $scope.monstercard = false;
@@ -139,6 +142,7 @@ app.controller('monsterController', function($scope, $http) {
         $scope.monsterinfo = false;
       },
 
+      // <--- Function to close the bestiary --->
       $scope.back = function() {
         $scope.bestiary = false;
         $scope.monstercard = false;
