@@ -13,6 +13,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
     </head>
+
+  <!-- Start of Final Fantasy Compendium and Bestiary application -->
     <body ng-app="finalFantasyApp">
         <div id="background-image">
             <header>
@@ -20,11 +22,15 @@
                 <h1 class="mobile"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"><br>compendium</h1>
             </header>
             <div id="main-content">
+
+                <!-- Start of character controller -->
                 <div ng-controller="characterController">
                     <div class="char-search">
                         <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
                     </div>
                     <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
+
+                        <!-- Displaying character info from data in json file -->
                         <h2>{{character.name}}</h2>
                         <div class="char-info">
                             <h5>Age: {{character.age}}</h5>
@@ -42,25 +48,31 @@
                         {{character.description}}</h5>
                     </div>
                 </div>
+                <!-- End of character controller -->
+
+                <!-- Start of monster controller -->
                 <div id="bestiary" class="desktop" ng-controller="monsterController">
                     <div class="monster-search" ng-show="bestiary">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
                     <div class="monster-card" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
+                        <h2>{{monster.name}}</h2>
                         <div class="monster-image" ng-show="monsterimage" ng-click="showMonsterInfo()">
-                            <h2 id="card-label">{{monster.name}}</h2>
-                            <img class="mobile" ng-src="{{monster.image}}">
-                            <img class="desktop" ng-src="{{monster.image}}">
-                            <h2 id="card-label" class="mobile">tap for more info!</h2>
-                            <h2 id="card-label" class="desktop">click for more info!</h2>
+
+                            <!-- Displaying monster info from data in json file -->
+                            <img ng-src="{{monster.image}}">
+                            <h2 class="mobile">tap for more info!</h2>
+                            <h2 class="desktop">click for more info!</h2>
                         </div>
                         <div class="monster-info" ng-show="monsterinfo" ng-click="showMonsterImage()">
-                            <h2 id="card-label">{{monster.name}}</h2>
-                            <h5 class="card-stats">id: {{monster.id}}</h5>
-                            <h5 class="card-stats">type: {{monster.name}}</h5>
-                            <h5 class="card-stats">{{monster.description}}</h5>
-                            <h2 id="card-label" class="mobile">tap to go back!</h2>
-                            <h2 id="card-label" class="desktop">click to go back!</h2>
+                            <h5>Japanese Name: {{monster.japaneseName}}</h5>
+                            <h5>Type: {{monster.type}}</h5>
+                            <h5>HP: {{monster.hp}}</h5>
+                            <h5>MP: {{monster.mp}}</h5>
+                            <h5>Origin: {{monster.origin}}</h5>
+                            <h5>{{monster.more}}</h5>
+                            <h2 class="mobile">tap to go back!</h2>
+                            <h2 class="desktop">click to go back!</h2>
                         </div>
                     </div>
                     <div ng-show="floatingimage" class="desktop">
@@ -71,8 +83,9 @@
                     <img title="click me to close the bestiary!" ng-click="back()" id="floating-image2" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
+                    <!-- End of monster controller -->
 
-                <!--*****************************************
+                <!--******************** chocoDex! (not in use) *************************
 
                 <div id="chocodex" class="desktop" ng-controller="chocoboController">
                     <div id="choco-card" class="hvr-hang" ng-show="chocodex" ng-repeat="chocobo in filteredData = (chocobos | filter:search:strict) | limitTo:1">
@@ -99,7 +112,7 @@
                     <button title="click to close the chocoDex!" id="back" ng-show="chocobutton" ng-click="back()">&nbsp;X&nbsp;</button>
                 
 
-                ********************************************-->
+                ************************ end of chocoDex! (not in use) ********************-->
                 </div>
             </div>
             <div class="mobile">
