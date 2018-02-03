@@ -5,7 +5,9 @@ This is a compendium of Final Fantasy characters from all of the many, many game
 (Although, not yet complete.)
 ```
 
-# chocoDex
+# bestiary
 ```
-I've incorporated the chocoDex application into the compendium application for fun!
+I've integrated a bestiary application hidden behind chibi Lightning. Unlike the 
+chocoDex! it's based on the compendium. More of a amalgamation of the two.
+There's currently only two monsters; I'll need to update it!
 ```
