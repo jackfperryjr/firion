@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     </head>
 
-  <!-- Start of Final Fantasy Compendium and Bestiary application -->
+  <!-- Start of finalFantasyComp and monsterAry application -->
     <body ng-app="finalFantasyApp">
         <div id="background-image">
             <header>
@@ -51,8 +51,8 @@
                 <!-- End of character controller -->
 
                 <!-- Start of monster controller -->
-                <div class="desktop" ng-controller="monsterController">
-                    <div class="monster-search" ng-show="bestiary">
+                <div ng-controller="monsterController">
+                    <div class="monster-search" ng-show="monsterAry">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
                     <div class="monster-card" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
@@ -76,11 +76,11 @@
                         </div>
                     </div>
                     <div ng-show="floatingimage" class="desktop">
-                        <img title="click me for the bestiary!" ng-click="showBestiary()" id="floating-image" class="hvr-hang" 
+                        <img title="click me for the monsterAry!" ng-click="showMonsterAry()" id="floating-image" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
                     <div ng-show="floatingimage2" class="desktop">
-                    <img title="click me to close the bestiary!" ng-click="closeBestiary()" id="floating-image2" class="hvr-hang" 
+                    <img title="click me to close the monsterAry!" ng-click="closeMonsterAry()" id="floating-image2" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
                     <!-- End of monster controller -->

@@ -464,6 +464,7 @@ footer {
     top: 170px;
     left: 5em;
     width: 50%;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
   }
 
   input[type=text] {
@@ -510,11 +511,11 @@ footer {
   }
 
   #floating-image2 {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  width: 10%;
-  z-index: -1;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 10%;
+    z-index: -1;
   }
 }
 /* <--- End of media query --->*/

@@ -115,16 +115,16 @@ app.controller('monsterController', function($scope, $http) {
       $scope.monsters = response.data;
 
       // <--- Setting initial statuses --->
-      $scope.bestiary = false;
+      $scope.monsterAry = false;
       $scope.monstercard = false;
       $scope.monsterimage = false;
       $scope.monsterinfo = false;
       $scope.floatingimage = true;
       $scope.floatingimage2 = false;
 
-      // <--- Function to open the bestiary --->
-      $scope.showBestiary = function() {
-        $scope.bestiary = true;
+      // <--- Function to open the monsterAry --->
+      $scope.showMonsterAry = function() {
+        $scope.monsterAry = true;
         $scope.monstercard = false;
         $scope.monsterimage = true;
         $scope.monsterinfo = false; 
@@ -144,9 +144,9 @@ app.controller('monsterController', function($scope, $http) {
         $scope.monsterinfo = false;
       },
 
-      // <--- Function to close the bestiary --->
-      $scope.closeBestiary = function() {
-        $scope.bestiary = false;
+      // <--- Function to close the monsterAry --->
+      $scope.closeMonsterAry = function() {
+        $scope.monsterAry = false;
         $scope.monstercard = false;
         $scope.monsterinfo = false;
         $scope.monsterimage = false;
