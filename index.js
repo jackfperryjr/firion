@@ -141,6 +141,9 @@ app.controller('monsterController', function($scope, $http) {
 
       $scope.back = function() {
         $scope.bestiary = false;
+        $scope.monstercard = false;
+        $scope.monsterinfo = false;
+        $scope.monsterimage = false;
         $scope.monsterbutton = false;
         $scope.floatingimage = true;
         $scope.floatingimage2 = false;
