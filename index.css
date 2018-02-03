@@ -80,7 +80,7 @@ input[type="text"] {
   padding-left: 2px;
 }
 
-.search-card {
+.char-search {
   position: fixed;
   top: 100px;
   left: 3em;
@@ -390,6 +390,61 @@ footer {
   }
   /* <--- End of styles for character info card ---> */
 
+  .monster-search {
+    position: fixed;
+    top: 90px;
+    right: 5em;
+    width: 35%;
+    background: rgba(255,255,255,.7);
+    color: rgb(0,0,0);
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    margin-top: 5em;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  /* <--- Styles for monster info card ---> */
+  .monster-card {
+    position: fixed;
+    top: 0;
+    right: 3em;
+    width: 20%;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    margin-top: 17em;
+    margin-right: 5em;
+    margin-bottom: 3em;
+    margin-left: auto;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .monster-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .monster-card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .monster-info h5 {
+    text-align: left;
+    line-height: 10px;
+    margin: 2em;
+  }
+  /* <--- End of styles for monster info card ---> */
+
+
   /* <--- Styles for changing to desktop layout ---> */
   header {
     left: 65px;
@@ -401,7 +456,7 @@ footer {
     letter-spacing: 10px;
   }
 
-  .search-card {
+  .char-search {
     top: 170px;
     left: 5em;
     width: 50%;
@@ -448,6 +503,14 @@ footer {
     top: 2em;
     right: 5em;
     width: 25%;
+  }
+
+  #floating-image2 {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: 10%;
+  z-index: -1;
   }
 }
 /* <--- End of media query --->*/
