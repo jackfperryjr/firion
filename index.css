@@ -235,10 +235,11 @@ footer {
   -webkit-animation-direction: normal, alternate !important;
   animation-direction: normal, alternate !important;
 }
-/* <--- End of animation for floating image --->*/
+/*<--- End of animation for floating image --->*/
 
-/* <--- Media query for desktop view ---> */
-@media(min-width: 815px) {
+/*<-- Media query for tablet view --->*/
+
+@media(min-width: 1024px) and (max-width: 1249px) {
   .mobile {
     display: none;
   }
@@ -246,7 +247,7 @@ footer {
   .desktop {
     display: inline-block;
   }
-
+  
   .desktop img {
     height: auto;
     width: 400px;
@@ -268,8 +269,8 @@ footer {
 
   .char-search {
     top: 170px;
-    left: 5em;
-    width: 50%;
+    left: 3em;
+    width: 52%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
   }
 
@@ -280,8 +281,11 @@ footer {
   }
 
   .char-card {
-    width: 60%;
-    margin: 6em;
+    margin-top: 8em;
+    margin-right: auto;
+    margin-bottom: 4em;
+    margin-left: 3em;
+    width: 65%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
   }
@@ -324,12 +328,12 @@ footer {
     width: 10%;
     z-index: -1;
   }
-  
+
   /* <--- Styles for monster search card ---> */
   .monster-search {
     position: fixed;
     top: 90px;
-    right: 5em;
+    right: 3em;
     width: 35%;
     background: rgba(255,255,255,.7);
     color: rgb(0,0,0);
@@ -348,10 +352,10 @@ footer {
   /* <--- Styles for monster info card ---> */
   .monster-card {
     position: fixed;
-    top: 16em;
-    right: 9em;
-    width: 25%;
-    height: 60%;
+    top: 18em;
+    right: 3em;
+    width: 35%;
+    height: 30%;
     background: rgb(255,255,255);
     color: rgb(0,0,0);
     text-align: center;
@@ -383,4 +387,160 @@ footer {
   /* <--- End of styles for monster info card ---> */
 
 }
-/* <--- End of media query --->*/
+
+/* <--- Media query for desktop view ---> */
+@media(min-width: 1250px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: inline-block;
+  }
+  
+  .desktop img {
+    height: auto;
+    width: 400px;
+  }
+
+  #background-image {
+    background: url("https://www.leviathyn.com/wp-content/uploads/2012/12/final-fantasy-xiii-12.jpg") no-repeat center center rgb(255,255,255);
+  }
+
+  header {
+    left: 65px;
+  }
+
+  h1 {
+    margin-left: 0.5em;
+    font-size: 3em;
+    letter-spacing: 10px;
+  }
+
+  .char-search {
+    top: 170px;
+    left: 5em;
+    width: 48%;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+  }
+
+  input[type=text] {
+    font-size: 16pt;
+    height: 30px;
+    width: 250px;
+  }
+
+  .char-card {
+    margin-top: 8em;
+    margin-right: auto;
+    margin-bottom: 4em;
+    margin-left: 5em;
+    width: 60%;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    z-index: 10;
+  }
+
+  .char-info {
+    margin-left: 3em;
+    letter-spacing: 5px;
+  }
+
+  .char-image {
+    width: 200px;
+  }
+
+  .char-image:hover {
+    transform: scale(1.10);
+    transition: all .7s ease-in-out;
+  }
+
+  .char-image img {
+    margin-right: 3em;
+  }
+
+  #main-content {
+    width: 80%;
+    margin-top: 0;
+    padding-top: 10em;
+  }
+
+  #floating-image {
+    position: fixed;
+    top: 2em;
+    right: 5em;
+    width: 25%;
+  }
+
+  #floating-image2 {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 10%;
+    z-index: -1;
+  }
+
+  /* <--- Styles for monster search card ---> */
+  .monster-search {
+    position: fixed;
+    top: 90px;
+    right: 5em;
+    width: 35%;
+    background: rgba(255,255,255,.7);
+    color: rgb(0,0,0);
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    margin-top: 5em;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+  }
+  /*<-- End of styles for monster search card --->*/
+
+  /* <--- Styles for monster info card ---> */
+  .monster-card {
+    position: fixed;
+    top: 18em;
+    right: 5em;
+    width: 35%;
+    height: 52%;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgb(0,0,0);
+    margin: auto;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .monster-image {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: auto;
+  }
+
+  .monster-card img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .monster-image img:hover {
+    transform: scale(2.00);
+    transition: all 1s ease-in-out;
+  }
+
+  .monster-info h5 {
+    text-align: left;
+    line-height: 0;
+    margin: 2em;
+  }
+
+  
+
+}
+/* <--- End of media queries --->*/
