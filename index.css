@@ -27,13 +27,7 @@ header {
   width: 100%;
   height: 100%;
   z-index: -100;
-  
-  /*
-  background: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1080/games/1/1/lightning-final-fantasy-xiii-game-hd-wallpaper-1920x1080-7401.jpg") no-repeat top center, rgb(255,255,255);
-  */
-
   background: url("https://www.leviathyn.com/wp-content/uploads/2012/12/final-fantasy-xiii-12.jpg") no-repeat center center rgb(255,255,255);
-  background-color: rgb(0,0,0);
   background-attachment: fixed !important;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
@@ -258,10 +252,6 @@ footer {
     width: 400px;
   }
 
-  #background-image {
-    background: url("https://www.leviathyn.com/wp-content/uploads/2012/12/final-fantasy-xiii-12.jpg") no-repeat center center rgb(255,255,255);
-  }
-
   header {
     left: 65px;
   }
@@ -375,7 +365,7 @@ footer {
   .monster-image {
     position: relative;
     margin: auto;
-    width: 70%;
+    width: 50%;
     height: auto;
   }
 
@@ -406,10 +396,6 @@ footer {
   .desktop img {
     height: auto;
     width: 400px;
-  }
-
-  #background-image {
-    background: url("https://www.leviathyn.com/wp-content/uploads/2012/12/final-fantasy-xiii-12.jpg") no-repeat center center rgb(255,255,255);
   }
 
   header {
@@ -544,8 +530,5 @@ footer {
     line-height: 0;
     margin: 2em;
   }
-
-  
-
 }
 /* <--- End of media queries --->*/
