@@ -18,21 +18,21 @@
     <body ng-app="finalFantasyApp">
         <div id="background-image">
             <header>
-                <h1 class="desktop"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"> compendium</h1>
-                <h1 class="mobile"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"><br>compendium</h1>
+                <h1 id="desktop" class="flipInY"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"> compendium</h1>
+                <h1 id="mobile" class="flipInY"><img src="http://simplyunbound.com/wordpress/wp-content/uploads/2016/02/2000px-Final_Fantasy_logo_with_JP.png"><br>compendium</h1>
             </header>
             <div id="main-content">
 
                 <!-- Start of character controller -->
                 <div ng-controller="characterController">
-                    <div class="char-search">
+                    <div id="char-search" class="zoomInUp">
                         <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
                     </div>
-                    <div class="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
+                    <div id="char-card" class="rollIn" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
 
                         <!-- Displaying character info from data in json file -->
                         <h2>{{character.name}}</h2>
-                        <div class="char-info">
+                        <div id="char-info">
                             <h5>Age: {{character.age}}</h5>
                             <h5>Race: {{character.race}}</h5>
                             <h5>Gender: {{character.gender}}</h5>
@@ -41,45 +41,45 @@
                             <h5>Class: {{character.class}}</h5>
                             <h5>Origin: {{character.origin}}</h5>
                         </div>
-                        <div class="char-image">
+                        <div id="char-image">
                             <img ng-src="{{character.image}}">
                         </div>
-                        <h5 class="description">{{character.quote}}<br><br>
+                        <h5 id="description">{{character.quote}}<br><br>
                         {{character.description}}</h5>
                     </div>
                 </div>
                 <!-- End of character controller -->
 
                 <!-- Start of monster controller -->
-                <div class="desktop" ng-controller="monsterController">
-                    <div class="monster-search" ng-show="monsterAry">
+                <div id="desktop" ng-controller="monsterController">
+                    <div id="monster-search" class="zoomInUp" ng-show="monsterAry">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
-                    <div class="monster-card" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
+                    <div id="monster-card" class="rollIn" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
                         <h2>{{monster.name}}</h2>
                         <div class="monster-image" ng-show="monsterimage" ng-click="showMonsterInfo()">
 
                             <!-- Displaying monster info from data in json file -->
                             <img ng-src="{{monster.image}}">
-                            <h2 class="mobile">tap for more info!</h2>
-                            <h2 class="desktop">click for more info!</h2>
+                            <h2 id="mobile">tap for more info!</h2>
+                            <h2 id="desktop">click for more info!</h2>
                         </div>
-                        <div class="monster-info" ng-show="monsterinfo" ng-click="showMonsterImage()">
+                        <div id="monster-info" ng-show="monsterinfo" ng-click="showMonsterImage()">
                             <h5>Japanese Name: {{monster.japaneseName}}</h5>
                             <h5>Type: {{monster.type}}</h5>
                             <h5>HP: {{monster.hp}}</h5>
                             <h5>MP: {{monster.mp}}</h5>
                             <h5>Origin: {{monster.origin}}</h5>
                             <h5>{{monster.more}}</h5>
-                            <h2 class="mobile">tap to go back!</h2>
-                            <h2 class="desktop">click to go back!</h2>
+                            <h2 id="mobile">tap to go back!</h2>
+                            <h2 id="desktop">click to go back!</h2>
                         </div>
                     </div>
-                    <div ng-show="floatingimage" class="desktop">
+                    <div ng-show="floatingimage" id="desktop">
                         <img title="click me for the monsterAry!" ng-click="showMonsterAry()" id="floating-image" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
-                    <div ng-show="floatingimage2" class="desktop">
+                    <div ng-show="floatingimage2" id="desktop">
                     <img title="click me to close the monsterAry!" ng-click="closeMonsterAry()" id="floating-image2" class="hvr-hang" 
                         src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
                     </div>
@@ -87,7 +87,7 @@
 
                 </div>
             </div>
-            <div class="mobile">
+            <div id="mobile">
                 <img id="floating-image" class="hvr-hang" 
                 src="https://s-media-cache-ak0.pinimg.com/originals/31/08/d8/3108d8c04f6579be6735eda78a320bb5.png">
             </div>
