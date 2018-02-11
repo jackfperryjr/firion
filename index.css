@@ -1,8 +1,193 @@
 
 /* <--- Created by Jack F. Perry, Jr. ---> */
 
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInY {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInY;
+    animation-name: flipInY;
+    -webkit-animation-duration: 1s, 2s;
+    animation-duration: 1s, 2s;
+    -webkit-animation-delay: 0s, .5s;
+    animation-delay: 0s, .5s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;  
+}
+
+@-webkit-keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInUp {
+    -webkit-animation-name: zoomInUp;
+    animation-name: zoomInUp;
+    -webkit-animation-duration: 2s, 3s;
+    animation-duration: 2s, 3s;
+    -webkit-animation-delay: 0s, .5s;
+    animation-delay: 0s, .5s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+}
+
+@-webkit-keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.rollIn {
+    -webkit-animation-name: rollIn;
+     animation-name: rollIn;
+    -webkit-animation-duration: 1s, 2s;
+    animation-duration: 1s, 2s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+}
+
+
+
 /* <--- Styles for main body html and content (mobile first) ---> */
-.desktop {
+#desktop {
   display: none;
 }
 
@@ -41,7 +226,7 @@ header {
   position: fixed;
   top: 1em;
   right: 1em;
-  width: 25%;
+  width: 25% !important;
   z-index: -1;
 }
 
@@ -62,7 +247,7 @@ h1 {
   letter-spacing: 10px;
 }
 
-.mobile img {
+#mobile img {
   width: 200px;
   height: auto;
 }
@@ -79,7 +264,7 @@ input[type="text"] {
   padding-left: 2px;
 }
 
-.char-search {
+#char-search {
   position: fixed;
   top: 100px;
   left: 3em;
@@ -95,7 +280,7 @@ input[type="text"] {
 /* <--- End of styles for search box ---> */
 
 /* <--- Styles for character info card ---> */
-.char-card {
+#char-card {
   position: relative;
   width: 90%;
   background: rgb(255,255,255);
@@ -111,7 +296,7 @@ input[type="text"] {
   z-index: 1000;
 }
 
-.char-info {
+#char-info {
   margin: 5px;
   text-align: left;
   float: left;
@@ -119,14 +304,14 @@ input[type="text"] {
   letter-spacing: 0px;
 }
 
-.description {
+#description {
   margin: 5px;
   text-align: left;
   float: left;
   line-height: 14px;
 }
 
-.char-image {
+#char-image {
   display: inline-block;
   float: right;
   margin: 5px;
@@ -134,7 +319,7 @@ input[type="text"] {
   width: 100px;
 }
 
-.char-image img {
+#char-image img {
   display: inline-block;
   float: right;
   margin: 5px;
@@ -239,15 +424,15 @@ footer {
 /*<-- Media query for tablet view --->*/
 
 @media(min-width: 1024px) and (max-width: 1249px) {
-  .mobile {
+  #mobile {
     display: none;
   }
 
-  .desktop {
+  #desktop {
     display: inline-block;
   }
   
-  .desktop img {
+  #desktop img {
     height: auto;
     width: 400px;
   }
@@ -262,7 +447,7 @@ footer {
     letter-spacing: 10px;
   }
 
-  .char-search {
+  #char-search {
     top: 170px;
     left: 3em;
     width: 52%;
@@ -275,7 +460,7 @@ footer {
     width: 250px;
   }
 
-  .char-card {
+  #char-card {
     margin-top: 8em;
     margin-right: auto;
     margin-bottom: 4em;
@@ -285,21 +470,21 @@ footer {
     z-index: 10;
   }
 
-  .char-info {
+  #char-info {
     margin-left: 3em;
     letter-spacing: 5px;
   }
 
-  .char-image {
+  #char-image {
     width: 200px;
   }
 
-  .char-image:hover {
+  #char-image:hover {
     transform: scale(1.10);
     transition: all .7s ease-in-out;
   }
 
-  .char-image img {
+  #char-image img {
     margin-right: 3em;
   }
 
@@ -313,19 +498,19 @@ footer {
     position: fixed;
     top: 2em;
     right: 5em;
-    width: 25%;
+    z-index: -1;
   }
 
   #floating-image2 {
     position: fixed;
     top: 1em;
     right: 1em;
-    width: 10%;
+    width: 10% !important;
     z-index: -1;
   }
 
   /* <--- Styles for monster search card ---> */
-  .monster-search {
+  #monster-search {
     position: fixed;
     top: 90px;
     right: 3em;
@@ -345,7 +530,7 @@ footer {
   /*<-- End of styles for monster search card --->*/
 
   /* <--- Styles for monster info card ---> */
-  .monster-card {
+  #monster-card {
     position: fixed;
     top: 18em;
     right: 3em;
@@ -362,19 +547,18 @@ footer {
     z-index: 10;
   }
 
-  .monster-image {
+  #monster-image {
     position: relative;
-    margin: auto;
     width: 50%;
     height: auto;
   }
 
-  .monster-card img {
+  #monster-card img {
     max-width: 90%;
     max-height: 90%;
   }
 
-  .monster-info h5 {
+  #monster-info h5 {
     text-align: left;
     line-height: 10px;
     margin: 2em;
@@ -385,15 +569,15 @@ footer {
 
 /* <--- Media query for desktop view ---> */
 @media(min-width: 1250px) {
-  .mobile {
+  #mobile {
     display: none;
   }
 
-  .desktop {
+  #desktop {
     display: inline-block;
   }
   
-  .desktop img {
+  #desktop img {
     height: auto;
     width: 400px;
   }
@@ -408,7 +592,7 @@ footer {
     letter-spacing: 10px;
   }
 
-  .char-search {
+  #char-search {
     top: 170px;
     left: 5em;
     width: 48%;
@@ -421,7 +605,7 @@ footer {
     width: 250px;
   }
 
-  .char-card {
+  #char-card {
     margin-top: 8em;
     margin-right: auto;
     margin-bottom: 4em;
@@ -431,21 +615,21 @@ footer {
     z-index: 10;
   }
 
-  .char-info {
+  #char-info {
     margin-left: 3em;
     letter-spacing: 5px;
   }
 
-  .char-image {
+  #char-image {
     width: 200px;
   }
 
-  .char-image:hover {
+  #char-image:hover {
     transform: scale(1.10);
     transition: all .7s ease-in-out;
   }
 
-  .char-image img {
+  #char-image img {
     margin-right: 3em;
   }
 
@@ -459,19 +643,18 @@ footer {
     position: fixed;
     top: 2em;
     right: 5em;
-    width: 25%;
   }
 
   #floating-image2 {
     position: fixed;
     top: 1em;
     right: 1em;
-    width: 10%;
+    width: 10% !important;
     z-index: -1;
   }
 
   /* <--- Styles for monster search card ---> */
-  .monster-search {
+  #monster-search {
     position: fixed;
     top: 90px;
     right: 5em;
@@ -491,7 +674,7 @@ footer {
   /*<-- End of styles for monster search card --->*/
 
   /* <--- Styles for monster info card ---> */
-  .monster-card {
+  #monster-card {
     position: fixed;
     top: 18em;
     right: 5em;
@@ -508,24 +691,24 @@ footer {
     z-index: 10;
   }
 
-  .monster-image {
+  #monster-image {
     position: relative;
     margin: auto;
     width: 50%;
     height: auto;
   }
 
-  .monster-card img {
+  #monster-card img {
     max-width: 80%;
     max-height: 80%;
   }
 
-  .monster-image img:hover {
+  #monster-image img:hover {
     transform: scale(2.00);
     transition: all 1s ease-in-out;
   }
 
-  .monster-info h5 {
+  #monster-info h5 {
     text-align: left;
     line-height: 0;
     margin: 2em;
