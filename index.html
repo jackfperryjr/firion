@@ -52,7 +52,7 @@
 
                 <!-- Start of monster controller -->
                 <div id="desktop" ng-controller="monsterController">
-                    <div id="monster-search" class="zoomInUp" ng-show="monsterAry">
+                    <div id="monster-search" class="zoomInDown" ng-show="monsterAry">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
                     <div id="monster-card" class="rollIn" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
