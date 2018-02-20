@@ -474,7 +474,7 @@ footer {
 
 /*<-- Media query for tablet view --->*/
 
-@media(min-width: 1024px) and (max-width: 1249px) {
+@media only screen and (min-width: 1024px) and (max-width: 1249px) {
   #mobile {
     display: none;
   }
@@ -619,7 +619,7 @@ footer {
 }
 
 /* <--- Media query for desktop view ---> */
-@media(min-width: 1250px) {
+@media only screen and (min-width: 1250px) {
   #mobile {
     display: none;
   }
