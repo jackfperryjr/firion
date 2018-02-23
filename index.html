@@ -17,18 +17,15 @@
   <!-- Start of finalFantasyComp and monsterAry application -->
     <body ng-app="finalFantasyApp">
         <div id="background-image">
-            <header>
-                <h1 id="desktop" class="flipInY"><img src="images/finalFantasyLogo.png"> compendium</h1>
-                <h1 id="mobile" class="flipInY"><img src="images/finalFantasyLogo.png"><br>compendium</h1>
-            </header>
+            <div id="title" class="flipInY"><img src="images/finalFantasyLogo.png"></div>
             <div id="main-content">
 
                 <!-- Start of character controller -->
                 <div ng-controller="characterController">
-                    <div id="char-search" class="zoomInUp">
-                        <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...kupo!"></h2>
+                    <div id="char-search" class="flipInY">
+                        <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="kupo!"></h2>
                     </div>
-                    <div id="char-card" class="rollIn" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
+                    <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
 
                         <!-- Displaying character info from data in json file -->
                         <h2>{{character.name}}</h2>
@@ -55,7 +52,7 @@
                     <div id="monster-search" class="zoomInDown" ng-show="monsterAry">
                         <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
                     </div>
-                    <div id="monster-card" class="rollIn" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
+                    <div id="monster-card" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
                         <h2>{{monster.name}}</h2>
                         <div class="monster-image" ng-show="monsterimage" ng-click="showMonsterInfo()">
 
@@ -75,6 +72,7 @@
                             <h2 id="desktop">click to go back!</h2>
                         </div>
                     </div>
+                    <!-- ************************************
                     <div ng-show="floatingimage" id="desktop">
                         <img title="click me for the monsterAry!" ng-click="showMonsterAry()" id="floating-image" class="hvr-hang" 
                         src="images/chibiLightning.png">
@@ -83,16 +81,20 @@
                     <img title="click me to close the monsterAry!" ng-click="closeMonsterAry()" id="floating-image2" class="hvr-hang" 
                         src="images/chibiLightning.png">
                     </div>
+                    ************************************ -->
                     <!-- End of monster controller -->
 
                 </div>
             </div>
+            <!-- ***************************************
             <div id="mobile">
                 <img id="floating-image" class="hvr-hang" 
                 src="images/chibiLightning.png">
             </div>
-            <footer>created by Jack F. Perry, Jr.</footer>
+            **************************************** -->
+            <footer>&copy;2018 jack f. perry, jr.</footer>
         </div>
+        <script src="angularIndex.js"></script>        
         <script src="index.js"></script>
     </body>
 </html>

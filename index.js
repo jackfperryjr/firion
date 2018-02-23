@@ -1,95 +1,23 @@
 
-// <--- Created by Jack F. Perry, Jr. --->
+//<--- Created by Jack F. Perry, Jr. --->
 
-/*
-// <--- Function to help position and style the tooltips --->
-(function() {
-    var ID = "tooltip";
-    var CLS_ON = "tooltip_ON";
-    var FOLLOW = true;
-    var DATA = "_tooltip";
-    var OFFSET_X = -220;
-    var OFFSET_Y = 20;
-    
-    showAt = function(e) {
-        var ntop = e.pageY + OFFSET_Y, nleft = e.pageX + OFFSET_X;
-        $("#" + ID).html($(e.target).data(DATA)).css({
-            position: "absolute", top: ntop, left: nleft
-        }).show();
-    };
-    $(document).on("mouseenter", "*[title]", function(e) {
-        $(this).data(DATA, $(this).attr("title"));
-        $(this).removeAttr("title").addClass(CLS_ON);
-        $("<div id='" + ID + "' />").appendTo("body");
-        showAt(e);
-    });
-    $(document).on("mouseleave", "." + CLS_ON, function(e) {
-        $(this).attr("title", $(this).data(DATA)).removeClass(CLS_ON);
-        $("#" + ID).remove();
-    });
-    if(FOLLOW) { 
-      $(document).on("mousemove", "." + CLS_ON, showAt); 
+//<--- Initializing variables for page sections --->
+let desktopLogo = $("#desktop");
+let mobileLogo = $("#mobile");
+let charSearch = $("#char-search");
+const desktop = window.matchMedia("(min-width: 810px)");
+
+//<--- Hiding divs --->
+desktopLogo.hide()
+mobileLogo.hide();
+charSearch.hide();
+
+$(document).ready(function() { 
+    if (desktop.matches) {
+        desktopLogo.show();
     }
-  }
-());
-*/
-
-// <--- Initializing Angular component --->
-var app = angular.module('finalFantasyApp', []);
-
-// <--- Angular controller to manage the characters --->
-app.controller('characterController', function($scope, $http) {
-  $http.get('characters.json')
-    .then(function(response) {
-      $scope.characters = response.data;
-    });
-  });
-
-// <--- Angular controller to manage the monsters --->
-app.controller('monsterController', function($scope, $http) {
-  $http.get('monsters.json')
-    .then(function(response) {
-      $scope.monsters = response.data;
-
-      // <--- Setting initial statuses --->
-      $scope.monsterAry = false;
-      $scope.monstercard = false;
-      $scope.monsterimage = false;
-      $scope.monsterinfo = false;
-      $scope.floatingimage = true;
-      $scope.floatingimage2 = false;
-
-      // <--- Function to open the monsterAry --->
-      $scope.showMonsterAry = function() {
-        $scope.monsterAry = true;
-        $scope.monstercard = false;
-        $scope.monsterimage = true;
-        $scope.monsterinfo = false; 
-        $scope.floatingimage = false;
-        $scope.floatingimage2 = true;        
-      },
-
-      // <--- Function to show monster info --->
-      $scope.showMonsterInfo = function() {
-        $scope.monsterinfo = true; 
-        $scope.monsterimage = false; 
-      },
-
-      // <--- Function to show mosnter image --->
-      $scope.showMonsterImage = function() {
-        $scope.monsterimage = true;
-        $scope.monsterinfo = false;
-      },
-
-      // <--- Function to close the monsterAry --->
-      $scope.closeMonsterAry = function() {
-        $scope.monsterAry = false;
-        $scope.monstercard = false;
-        $scope.monsterinfo = false;
-        $scope.monsterimage = false;
-        $scope.floatingimage = true;
-        $scope.floatingimage2 = false;
-        $scope.search = null;
-      }
-  });
-}); 
+    else {
+        mobileLogo.show();
+    }
+    charSearch.delay(1000).show();
+});

@@ -238,13 +238,10 @@
 }
 
 /* <--- Styles for main body html and content (mobile first) ---> */
-#desktop {
-  display: none;
-}
 
 html {
   height: 100%;
-  color: rgb(255,255,255);
+  color: rgb(0,0,0);
   box-sizing: border-box;
   font-family: "Raleway", serif;
 }
@@ -252,7 +249,7 @@ html {
 header {
   position: fixed;
   top: 5px;
-  left: 50px;
+  left: 20%;
 }
 
 #background-image {
@@ -263,8 +260,13 @@ header {
   width: 100%;
   height: 100%;
   z-index: -100;
-  background: url("images/backgroundLightning.jpg") no-repeat center center rgb(255,255,255);
+  background-color: rgb(255,255,255);
+
+  /******************************
+  background: url("images/backgroundLightning.jpg") no-repeat center center;
   background-attachment: fixed !important;
+  ******************************/
+
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   -webkit-background-size: cover !important;
@@ -288,17 +290,13 @@ header {
   margin-bottom: 1em;
 }
 
-h1 {
-  text-shadow: 2px 2px 2px rgb(0,0,0);
-  display: inline-block;
-  font-size: 1em;
-  line-height: 1em;
-  margin-left: 1em;
-  vertical-align: top;
-  letter-spacing: 10px;
+#title {
+  position: fixed;
+  top: 1%;
+  left: 22.5%;
 }
 
-#mobile img {
+#title img {
   width: 200px;
   height: auto;
 }
@@ -306,24 +304,23 @@ h1 {
 
 /* <--- Styles for search box ---> */
 input[type="text"] {
+  text-align: center;
   background: rgba(255,255,255,.0);
   border: none;
   border-bottom: 2px solid rgb(0,0,0);
   font-size: 16pt;
   height: 20px;
   width: 200px;
-  padding-left: 2px;
 }
 
 #char-search {
   position: fixed;
-  top: 100px;
-  left: 3em;
+  top: 10%;
+  left: 15%;
   width: 70%;
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,0);
   color: rgb(0,0,0);
-  box-shadow: 2px 2px 10px rgb(0,0,0);
-  border-radius: 5px;
+  border: none;
   margin: auto;
   transition: all .2s ease-in-out;
   overflow: hidden;
@@ -337,10 +334,7 @@ input[type="text"] {
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
-  margin-top: 6em;
-  margin-right: auto;
-  margin-bottom: 4em;
-  margin-left: auto;
+  margin: 5em auto 4em;
   transition: all .2s ease-in-out;
   overflow: hidden;
   box-shadow: 2px 2px 10px rgb(0,0,0);
@@ -385,15 +379,15 @@ footer {
   bottom: 0;
   height: auto;
   width: 100%;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
   display: inline-block;
-  font-size: 7pt;
+  font-size: 6pt;
+  color: rgb(0,0,0);
   text-align: center;
   line-height: 1.5em;
   margin-top: 20px;
   margin-bottom: 1em;
   vertical-align: middle;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 /* <--- End of styles for footer ---> */
 
@@ -475,15 +469,14 @@ footer {
 /*<-- Media query for tablet view --->*/
 
 @media only screen and (min-width: 1024px) and (max-width: 1249px) {
-  #mobile {
-    display: none;
+  
+  #title {
+    position: fixed;
+    top: 2%;
+    left: 33%;
   }
 
-  #desktop {
-    display: inline-block;
-  }
-  
-  #desktop img {
+  #title img {
     height: auto;
     width: 400px;
   }
@@ -492,17 +485,11 @@ footer {
     left: 65px;
   }
 
-  h1 {
-    margin-left: 0.5em;
-    font-size: 3em;
-    letter-spacing: 10px;
-  }
-
   #char-search {
-    top: 170px;
-    left: 3em;
+    top: 20%;
+    left: 25%;
     width: 52%;
-    box-shadow: 4px 4px 10px rgb(0,0,0);
+    border: none;
   }
 
   input[type=text] {
@@ -512,11 +499,8 @@ footer {
   }
 
   #char-card {
-    margin-top: 8em;
-    margin-right: auto;
-    margin-bottom: 4em;
-    margin-left: 3em;
-    width: 65%;
+    margin: 5em auto;
+    width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
   }
@@ -540,7 +524,7 @@ footer {
   }
 
   #main-content {
-    width: 80%;
+    width: 100%;
     margin-top: 0;
     padding-top: 10em;
   }
@@ -616,19 +600,22 @@ footer {
   }
   /* <--- End of styles for monster info card ---> */
 
+  footer {
+    font-size: 8pt;
+    letter-spacing: 5px;
+  }
 }
 
 /* <--- Media query for desktop view ---> */
 @media only screen and (min-width: 1250px) {
-  #mobile {
-    display: none;
+  
+  #title {
+    position: fixed;
+    top: 2%;
+    left: 35%;
   }
 
-  #desktop {
-    display: inline-block;
-  }
-  
-  #desktop img {
+  #title img {
     height: auto;
     width: 400px;
   }
@@ -637,17 +624,11 @@ footer {
     left: 65px;
   }
 
-  h1 {
-    margin-left: 0.5em;
-    font-size: 3em;
-    letter-spacing: 10px;
-  }
-
   #char-search {
-    top: 170px;
-    left: 5em;
+    top: 20%;
+    left: 25%;
     width: 48%;
-    box-shadow: 4px 4px 10px rgb(0,0,0);
+    border: none;
   }
 
   input[type=text] {
@@ -657,11 +638,8 @@ footer {
   }
 
   #char-card {
-    margin-top: 8em;
-    margin-right: auto;
-    margin-bottom: 4em;
-    margin-left: 5em;
-    width: 60%;
+    margin: 5em auto;
+    width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
   }
@@ -685,7 +663,7 @@ footer {
   }
 
   #main-content {
-    width: 80%;
+    width: 100%;
     margin-top: 0;
     padding-top: 10em;
   }
@@ -763,6 +741,11 @@ footer {
     text-align: left;
     line-height: 0;
     margin: 2em;
+  }
+
+  footer {
+    font-size: 8pt;
+    letter-spacing: 5px;
   }
 }
 /* <--- End of media queries --->*/
