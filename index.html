@@ -44,54 +44,64 @@
                         <h5 id="description">{{character.quote}}<br><br>
                         {{character.description}}</h5>
                     </div>
+
+                <div id="inputForm">
+                    <form id="form">
+                    <label>Name: </label>
+                    <input type="text" ng-model="character.name"/><br><br>                
+                    <label>Age: </label>
+                    <input type="text" ng-model="character.age"/><br><br>
+                    <label>Race: </label>
+                    <input type="text" ng-model="character.race"/><br><br>
+                    <label>Class: </label>
+                    <input type="text" ng-model="character.class"/><br><br>
+                    <label for="height">Height: </label>
+                    <select id="height" name="height" ng-model="character.height">
+                        <option value="Unknown">Unknown</option>
+                        <option value="1.50m">1.50m</option>
+                        <option value="1.51m">1.51m</option>
+                        <option value="1.52m">1.52m</option>
+                    </select><br><br>
+                    <label for="weight">Weight: </label>
+                    <select id="weight" name="weight" ng-model="character.weight">
+                        <option value="Unknown">Unknown</option>
+                        <option value="40kg">40kg</option>
+                        <option value="41kg">41kg</option>
+                        <option value="42kg">42kg</option>
+                    </select><br><br>
+                    <label for="gender">Gender: </label>
+                    <select id="gender" name="gender" ng-model="character.gender">
+                        <option value="Unknown">Unknown</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br><br>
+                    <label for="origin">Origin: </label>
+                    <select id="origin" name="origin" ng-model="character.origin">
+                        <option value="Unknown">Unknown</option>
+                        <option value="FFI">FFI</option>
+                        <option value="FFII">FFII</option>
+                        <option value="FFIII">FFIII</option>
+                        <option value="FFIV">FFIV</option>
+                        <option value="FFV">FFV</option>
+                        <option value="FFVI">FFVI</option>
+                        <option value="FFVII">FFVII</option>
+                        <option value="FFVIII">FFVIII</option>
+                        <option value="FFIX">FFIX</option>
+                        <option value="FFX">FFX</option>
+                        <option value="FFX-2">FFX-2</option>
+                        <option value="FFXII">FFXII</option>
+                        <option value="FFXIII">FFXIII</option>
+                        <option value="FFXIII-2">FFXIII-2</option>
+                        <option value="FFXV">FFXV</option>
+                    </select><br><br>
+                    <div id="inputClose">close x</div>
+                    <div id="inputSubmit">submit</div>                    
+                    <div id="dataSent">This isn't working yet :(</div>
+                    </form>
                 </div>
-                <!-- End of character controller -->
-
-                <!-- Start of monster controller -->
-                <div id="desktop" ng-controller="monsterController">
-                    <div id="monster-search" class="zoomInDown" ng-show="monsterAry">
-                        <h2>enter a monster: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="...grr!"></h2>
-                    </div>
-                    <div id="monster-card" ng-show="monstercard" ng-repeat="monster in filteredData = (monsters | filter:search.name ) | limitTo:1" ng-hide="filteredData.length==monsters.length">
-                        <h2>{{monster.name}}</h2>
-                        <div class="monster-image" ng-show="monsterimage" ng-click="showMonsterInfo()">
-
-                            <!-- Displaying monster info from data in json file -->
-                            <img ng-src="{{monster.image}}">
-                            <h2 id="mobile">tap for more info!</h2>
-                            <h2 id="desktop">click for more info!</h2>
-                        </div>
-                        <div id="monster-info" ng-show="monsterinfo" ng-click="showMonsterImage()">
-                            <h5>Japanese Name: {{monster.japaneseName}}</h5>
-                            <h5>Type: {{monster.type}}</h5>
-                            <h5>HP: {{monster.hp}}</h5>
-                            <h5>MP: {{monster.mp}}</h5>
-                            <h5>Origin: {{monster.origin}}</h5>
-                            <h5>{{monster.more}}</h5>
-                            <h2 id="mobile">tap to go back!</h2>
-                            <h2 id="desktop">click to go back!</h2>
-                        </div>
-                    </div>
-                    <!-- ************************************
-                    <div ng-show="floatingimage" id="desktop">
-                        <img title="click me for the monsterAry!" ng-click="showMonsterAry()" id="floating-image" class="hvr-hang" 
-                        src="images/chibiLightning.png">
-                    </div>
-                    <div ng-show="floatingimage2" id="desktop">
-                    <img title="click me to close the monsterAry!" ng-click="closeMonsterAry()" id="floating-image2" class="hvr-hang" 
-                        src="images/chibiLightning.png">
-                    </div>
-                    ************************************ -->
-                    <!-- End of monster controller -->
-
+                <div id="inputOpen">character input form</div>
                 </div>
             </div>
-            <!-- ***************************************
-            <div id="mobile">
-                <img id="floating-image" class="hvr-hang" 
-                src="images/chibiLightning.png">
-            </div>
-            **************************************** -->
             <footer>&copy;2018 jack f. perry, jr.</footer>
         </div>
         <script src="angularIndex.js"></script>        
