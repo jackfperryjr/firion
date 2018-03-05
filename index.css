@@ -367,7 +367,7 @@ header {
 
 /* <--- Styles for search box ---> */
 input[type="text"] {
-  text-align: center;
+  text-align: left;
   background: rgba(255,255,255,.0);
   border: none;
   border-bottom: 2px solid rgb(0,0,0);

@@ -23,7 +23,7 @@
                 <!-- Start of character controller -->
                 <div ng-controller="characterController">
                     <div id="char-search" class="flipInY">
-                        <h2>enter a character: <input type="text" ng-model="search.name" ng-minlength="3" placeholder="kupo!"></h2>
+                        <h2>enter a character: <input id="searchBar" type="text" ng-model="search.name" ng-minlength="3" placeholder=" ...kupo!"></h2>
                     </div>
                     <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
 
@@ -48,35 +48,35 @@
                 <div id="inputForm">
                     <form id="form">
                     <label>Name: </label>
-                    <input type="text" ng-model="character.name"/><br><br>                
+                    <input id="name" type="text"><br><br>                
                     <label>Age: </label>
-                    <input type="text" ng-model="character.age"/><br><br>
+                    <input id="age" type="text"><br><br>
                     <label>Race: </label>
-                    <input type="text" ng-model="character.race"/><br><br>
+                    <input type="text"><br><br>
                     <label>Class: </label>
-                    <input type="text" ng-model="character.class"/><br><br>
+                    <input type="text"><br><br>
                     <label for="height">Height: </label>
-                    <select id="height" name="height" ng-model="character.height">
+                    <select id="height" name="height">
                         <option value="Unknown">Unknown</option>
                         <option value="1.50m">1.50m</option>
                         <option value="1.51m">1.51m</option>
                         <option value="1.52m">1.52m</option>
                     </select><br><br>
                     <label for="weight">Weight: </label>
-                    <select id="weight" name="weight" ng-model="character.weight">
+                    <select id="weight" name="weight">
                         <option value="Unknown">Unknown</option>
                         <option value="40kg">40kg</option>
                         <option value="41kg">41kg</option>
                         <option value="42kg">42kg</option>
                     </select><br><br>
                     <label for="gender">Gender: </label>
-                    <select id="gender" name="gender" ng-model="character.gender">
+                    <select id="gender" name="gender">
                         <option value="Unknown">Unknown</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select><br><br>
                     <label for="origin">Origin: </label>
-                    <select id="origin" name="origin" ng-model="character.origin">
+                    <select id="origin" name="origin">
                         <option value="Unknown">Unknown</option>
                         <option value="FFI">FFI</option>
                         <option value="FFII">FFII</option>
