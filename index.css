@@ -356,11 +356,11 @@ header {
 #title {
   position: fixed;
   top: 25%;
-  left: 22.5%;
+  left: 10%;
 }
 
 #title img {
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 /* <--- End of styles for main body html and content ---> */
@@ -378,7 +378,7 @@ input[type="text"] {
 
 #char-search {
   position: fixed;
-  top: 35%;
+  top: 38%;
   left: 15%;
   width: 70%;
   background: rgba(255,255,255,0);
@@ -437,7 +437,7 @@ input[type="text"] {
 /* <--- Styles for footer ---> */
 footer {
   position: fixed;
-  bottom: 57%;
+  bottom: 54%;
   height: auto;
   width: 100%;
   display: inline-block;
