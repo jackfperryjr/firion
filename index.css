@@ -529,17 +529,17 @@ footer {
 
 /*<-- Media query for tablet view --->*/
 
-@media only screen and (min-width: 1024px) and (max-width: 1249px) {
+@media only screen and (min-width: 800px) and (max-width: 850px) {
   
   #title {
     position: fixed;
-    top: 2%;
-    left: 33%;
+    top: 25%;
+    left: 5%;
   }
 
   #title img {
     height: auto;
-    width: 400px;
+    width: 200px;
   }
 
   header {
@@ -547,8 +547,8 @@ footer {
   }
 
   #char-search {
-    top: 25%;
-    left: 25%;
+    top: 45%;
+    left: -5%;
     width: 52%;
     border: none;
   }
@@ -560,8 +560,8 @@ footer {
   }
 
   #char-card {
-    margin: 5em auto;
-    width: 45%;
+    margin: 5em 0 5em 20em;
+    width: 55%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
   }
@@ -591,13 +591,16 @@ footer {
   }
 
   footer {
+    bottom: 30%;
+    text-align: left;
+    padding-left: 5%;
     font-size: 8pt;
     letter-spacing: 5px;
   }
 }
 
 /* <--- Media query for desktop view ---> */
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 851px) {
   
   #inputOpen {
     color: rgba(0,0,0,.1);
