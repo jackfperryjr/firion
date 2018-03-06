@@ -560,7 +560,7 @@ footer {
   }
 
   #char-card {
-    margin: 0 0 2em 20em;
+    margin: -8em 0 10em 20em;
     width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
