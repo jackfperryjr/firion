@@ -2,7 +2,6 @@
 // <--- Created by Jack F. Perry, Jr. --->
 
 // <--- Initializing Angular component --->
-
 var app = angular.module('finalFantasyApp', []);
 
 // <--- Angular controller to manage the characters --->
