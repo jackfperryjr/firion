@@ -1,6 +1,7 @@
 
 /* <--- Created by Jack F. Perry, Jr. ---> */
 
+/* <--- Animation from animate.css */
 @-webkit-keyframes flipInY {
   from {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -85,171 +86,14 @@
     -webkit-animation-direction: normal;
     animation-direction: normal;  
 }
-
-@-webkit-keyframes zoomInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-@keyframes zoomInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-.zoomInDown {
-    -webkit-animation-name: zoomInDown;
-    animation-name: zoomInDown;
-    -webkit-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
-    -webkit-animation-delay: 0s, 0s;
-    animation-delay: 0s, 0s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-}
-
-@-webkit-keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-@keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-.zoomInUp {
-    -webkit-animation-name: zoomInUp;
-    animation-name: zoomInUp;
-    -webkit-animation-duration: 2s, 3s;
-    animation-duration: 2s, 3s;
-    -webkit-animation-delay: 0s, .5s;
-    animation-delay: 0s, .5s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-}
-
-@-webkit-keyframes rollIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes rollIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.rollIn {
-    -webkit-animation-name: rollIn;
-     animation-name: rollIn;
-    -webkit-animation-duration: .5s, 1s;
-    animation-duration: .5s, 1s;
-    -webkit-animation-delay: 0s, .3s;
-    animation-delay: 0s, .3s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-}
+/* <--- End of animation --->*/
 
 /* <--- Styles for main body html and content (mobile first) ---> */
-
 html {
   height: 100%;
   color: rgb(0,0,0);
   box-sizing: border-box;
   font-family: "Raleway", serif;
-}
-
-header {
-  position: fixed;
-  top: 5px;
-  left: 20%;
 }
 
 #background-image {
@@ -262,7 +106,8 @@ header {
   z-index: -100;
   background-color: rgb(255,255,255);
 
-  /******************************
+  /* <--- Background image I was using, maybe I'll use again --->
+  *******************************
   background: url("images/backgroundLightning.jpg") no-repeat center center;
   background-attachment: fixed !important;
   ******************************/
@@ -274,6 +119,9 @@ header {
   -o-background-size: cover !important;
   background-size: cover !important;
 }
+
+/* <--- Upcoming character input form stuff --->
+******************************************************
 
 #inputOpen {
   position: fixed;
@@ -345,6 +193,7 @@ header {
 #height, #weight, #gender, #origin {
   float: right;
 }
+******************************************************/
 
 #main-content {
   text-align: center; 
@@ -356,12 +205,16 @@ header {
 #title {
   position: fixed;
   top: 25%;
-  left: 10%;
+  margin: auto;
+  text-align: center;
+  transition: all .2s ease-in-out;
 }
 
 #title img {
-  width: 300px;
+  width: 60%;
   height: auto;
+  text-align: center;
+  transition: all .2s ease-in-out;
 }
 /* <--- End of styles for main body html and content ---> */
 
@@ -452,94 +305,35 @@ footer {
 }
 /* <--- End of styles for footer ---> */
 
-/* <--- Animation to control the floating image ---> */
-@-webkit-keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
+/* <--- MEDIA QUERIES --->
+************************************************************/
+
+/* <--- Weird sweet spot ---> */
+@media only screen and (min-width: 450px) and (max-width: 799px) {
+  #title {
+    position: fixed;
+    top: 20%;
   }
 
-  50% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
+  #title img {
+    height: auto;
+    width: 60%;
   }
 }
 
-@keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-
-  50% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-
-@-webkit-keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-
-@keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-
-.hvr-hang {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  -webkit-transform: translateZ(0) !important;
-  transform: translateZ(0) !important;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0) !important;
-  -webkit-backface-visibility: hidden !important;
-  backface-visibility: hidden !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  -webkit-animation-name: hvr-hang-sink, hvr-hang !important;
-  animation-name: hvr-hang-sink, hvr-hang !important;
-  -webkit-animation-duration: 1s, 2s !important;
-  animation-duration: 1s, 2s !important;
-  -webkit-animation-delay: 0s, .3s !important;
-  animation-delay: 0s, .3s !important;
-  -webkit-animation-timing-function: ease-out, ease-in-out !important;
-  animation-timing-function: ease-out, ease-in-out !important;
-  -webkit-animation-iteration-count: 1, infinite !important;
-  animation-iteration-count: 1, infinite !important;
-  -webkit-animation-fill-mode: forwards !important;
-  animation-fill-mode: forwards !important;
-  -webkit-animation-direction: normal, alternate !important;
-  animation-direction: normal, alternate !important;
-}
-/*<--- End of animation for floating image --->*/
-
-/*<-- Media query for tablet view --->*/
-
+/* <--- Landscape view ---> */
 @media only screen and (min-width: 800px) and (max-width: 850px) {
   
   #title {
     position: fixed;
     top: 25%;
     left: 5%;
+    text-align: left;
   }
 
   #title img {
     height: auto;
-    width: 200px;
+    width: 50%;
   }
 
   header {
@@ -599,7 +393,7 @@ footer {
   }
 }
 
-/* <--- Media query for desktop view ---> */
+/* <--- Tablet and desktop view ---> */
 @media only screen and (min-width: 851px) {
   
   #inputOpen {
@@ -615,12 +409,11 @@ footer {
   #title {
     position: fixed;
     top: 25%;
-    left: 35.75%;
   }
 
   #title img {
     height: auto;
-    width: 400px;
+    width: 35%;
   }
 
   header {
@@ -678,4 +471,5 @@ footer {
     letter-spacing: 5px;
   }
 }
-/* <--- End of media queries --->*/
+/************************************************************
+<--- End of media queries ---> */
