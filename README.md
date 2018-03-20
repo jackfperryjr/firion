@@ -1,17 +1,19 @@
+
 # finalFantasyComp
 A Final Fantasy Compendium
+
 ```
 What started as a Code Louisville FEWD project has turned into a bigger project
 for me that I will continue to update periodically.
 
 This is a compendium of Final Fantasy characters from all of the many, many games. 
 (Although, not yet complete.)
+```
 
 ## Code Louisville FE Project Notes
-## Some Custom CSS Classes
 
 ```
-The class(es) I created are:
+The CSS class(es) I created are:
 
 1. .search-card
     This class contains design elements for the search box, such as size, background color, 
@@ -26,10 +28,10 @@ The class(es) I created are:
     Margins, line-height, letter-spacing.
   
 4. Many more :)
-
 ```
 
 ## Custom JavaScript Functions
+
 ```
 The Javascript function I created is:
 
