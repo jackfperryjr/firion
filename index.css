@@ -220,7 +220,7 @@ footer {
   width: 100%;
   display: inline-block;
   font-size: 6pt;
-  color: rgb(0,0,0);
+  color: rgb(190,190,190);
   text-align: center;
   line-height: 1.5em;
   margin-top: 20px;
@@ -320,16 +320,6 @@ footer {
 
 /* <--- Tablet and desktop view ---> */
 @media only screen and (min-width: 851px) {
-  
-  #inputOpen {
-    color: rgba(0,0,0,.1);
-    top: 30%;
-    left: 44%;
-  }
-
-  #inputForm {
-    width: 15%;
-  }
 
   #title {
     position: fixed;
@@ -338,11 +328,11 @@ footer {
 
   #title img {
     height: auto;
-    width: 35%;
+    width: 40%;
   }
 
   #char-search {
-    top: 45%;
+    top: 50%;
     left: 25.75%;
     width: 48%;
     border: none;
@@ -387,7 +377,7 @@ footer {
   }
 
   footer {
-    bottom: 43%;
+    bottom: 40%;
     font-size: 8pt;
     letter-spacing: 5px;
   }
