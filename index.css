@@ -123,8 +123,6 @@ html {
 #main-content {
   text-align: center; 
   width: 100%;  
-  padding-top: 7em;
-  margin-bottom: 1em;
 }
 
 #title {
@@ -175,7 +173,7 @@ input[type="text"] {
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
-  margin: 15em auto;
+  margin: 95% auto 60% auto;
   transition: all .2s ease-in-out;
   overflow: hidden;
   box-shadow: 2px 2px 10px rgb(0,0,0);
@@ -244,6 +242,10 @@ footer {
     height: auto;
     width: 60%;
   }
+
+  #char-card {
+    margin: 50% auto 25% auto;
+  }
 }
 
 /* <--- Landscape view ---> */
@@ -279,7 +281,7 @@ footer {
   }
 
   #char-card {
-    margin: -5em 0 10em 20em;
+    margin: 5% 0 5% 45%;
     width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
@@ -301,12 +303,6 @@ footer {
 
   #char-image img {
     margin-right: 3em;
-  }
-
-  #main-content {
-    width: 100%;
-    margin-top: 0;
-    padding-top: 10em;
   }
 
   footer {
@@ -345,7 +341,7 @@ footer {
   }
 
   #char-card {
-    margin: 13em auto;
+    margin: 27% auto 10% auto;
     width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
@@ -368,12 +364,6 @@ footer {
 
   #char-image img {
     margin-right: 3em;
-  }
-
-  #main-content {
-    width: 100%;
-    margin-top: 0;
-    padding-top: 10em;
   }
 
   footer {
