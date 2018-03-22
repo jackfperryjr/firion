@@ -21,7 +21,7 @@
                 <!-- Start of character controller -->
                 <div ng-controller="characterController">
                     <div id="char-search" class="flipInY">
-                        <input id="searchBar" type="text" ng-model="search.name" ng-minlength="3" placeholder=" enter a character...">
+                        <input class="sticky" type="text" ng-model="search.name" ng-minlength="3" placeholder=" enter a character...">
                     </div>
                     <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
 
@@ -49,6 +49,6 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-        <script src="angularIndex.js"></script>        
+        <script src="angularIndex.js"></script>     
     </body>
 </html>

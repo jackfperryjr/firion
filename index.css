@@ -126,17 +126,15 @@ html {
 }
 
 #title {
-  position: fixed;
-  top: 25%;
-  margin: auto;
+  position: relative;
+  margin: 65% auto 0 auto;
   text-align: center;
   transition: all .2s ease-in-out;
 }
 
 #title img {
-  width: 60%;
+  width: 80%;
   height: auto;
-  text-align: center;
   transition: all .2s ease-in-out;
 }
 /* <--- End of styles for main body html and content ---> */
@@ -153,16 +151,16 @@ input[type="text"] {
 }
 
 #char-search {
-  position: fixed;
-  top: 38%;
-  left: 15%;
-  width: 70%;
-  background: rgba(255,255,255,0);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,.9);
   color: rgb(0,0,0);
-  border: none;
-  margin: auto;
+  margin: 0 auto;
+  padding: 5% 0;
   transition: all .2s ease-in-out;
   overflow: hidden;
+  z-index: 2000;
 }
 /* <--- End of styles for search box ---> */
 
@@ -173,7 +171,7 @@ input[type="text"] {
   background: rgb(255,255,255);
   color: rgb(0,0,0);
   border-radius: 5px;
-  margin: 95% auto 60% auto;
+  margin: 5% auto 15% auto;
   transition: all .2s ease-in-out;
   overflow: hidden;
   box-shadow: 2px 2px 10px rgb(0,0,0);
@@ -212,8 +210,7 @@ input[type="text"] {
 
 /* <--- Styles for footer ---> */
 footer {
-  position: fixed;
-  bottom: 54%;
+  position: relative;
   height: auto;
   width: 100%;
   display: inline-block;
@@ -221,8 +218,6 @@ footer {
   color: rgb(190,190,190);
   text-align: center;
   line-height: 1.5em;
-  margin-top: 20px;
-  margin-bottom: 1em;
   vertical-align: middle;
   letter-spacing: 3px;
 }
@@ -234,8 +229,7 @@ footer {
 /* <--- Weird sweet spot ---> */
 @media only screen and (min-width: 450px) and (max-width: 799px) {
   #title {
-    position: fixed;
-    top: 20%;
+    position: relative;
   }
 
   #title img {
@@ -244,7 +238,7 @@ footer {
   }
 
   #char-card {
-    margin: 50% auto 25% auto;
+    margin: 10% auto 5% auto;
   }
 }
 
@@ -252,10 +246,9 @@ footer {
 @media only screen and (min-width: 800px) and (max-width: 850px) {
   
   #title {
-    position: fixed;
-    top: 20%;
-    left: 5%;
+    position: relative;
     text-align: left;
+    margin: 5%;
   }
 
   #title img {
@@ -263,15 +256,11 @@ footer {
     width: 50%;
   }
 
-  header {
-    left: 65px;
-  }
-
   #char-search {
-    top: 45%;
-    left: -5%;
-    width: 52%;
-    border: none;
+    text-align: left;
+    width: 30%;
+    margin: 0 0 0 5%;
+    padding: 1% 0;
   }
 
   input[type=text] {
@@ -281,7 +270,7 @@ footer {
   }
 
   #char-card {
-    margin: 5% 0 5% 45%;
+    margin: -10% 0 20% 45%;
     width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
@@ -306,7 +295,7 @@ footer {
   }
 
   footer {
-    bottom: 40%;
+    position: relative;
     text-align: left;
     padding-left: 5%;
     font-size: 8pt;
@@ -318,8 +307,7 @@ footer {
 @media only screen and (min-width: 851px) {
 
   #title {
-    position: fixed;
-    top: 25%;
+    margin: 15% auto 0 auto;
   }
 
   #title img {
@@ -328,10 +316,9 @@ footer {
   }
 
   #char-search {
-    top: 50%;
-    left: 25.75%;
-    width: 48%;
-    border: none;
+    position: sticky;
+    margin: 0 auto;
+    padding: 1% 0;
   }
 
   input[type=text] {
@@ -341,7 +328,7 @@ footer {
   }
 
   #char-card {
-    margin: 27% auto 10% auto;
+    margin: 1% auto 5% auto;
     width: 45%;
     box-shadow: 4px 4px 10px rgb(0,0,0);
     z-index: 10;
@@ -367,7 +354,6 @@ footer {
   }
 
   footer {
-    bottom: 40%;
     font-size: 8pt;
     letter-spacing: 5px;
   }
