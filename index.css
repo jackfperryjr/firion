@@ -126,10 +126,13 @@ html {
 }
 
 #title {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30%;
   margin: 65% auto 0 auto;
   text-align: center;
   transition: all .2s ease-in-out;
+  z-index: -100;
 }
 
 #title img {
@@ -308,6 +311,7 @@ footer {
 @media only screen and (min-width: 851px) {
 
   #title {
+    top: 35%;
     margin: 15% auto 0 auto;
   }
 
