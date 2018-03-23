@@ -155,12 +155,35 @@ html {
 /* <--- Styles for search box ---> */
 input[type="text"] {
   text-align: center;
-  background: rgba(255,255,255,.0);
+  background: rgba(255,255,255,1);
   border: none;
   border-bottom: 2px solid rgb(0,0,0);
+  color: rgb(255,0,0);
   font-size: 16pt;
   height: 20px;
   width: 90%;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(0,0,0) !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+  color: rgb(0,0,0) !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: rgb(0,0,0) !important;  
+}
+ 
+input:-ms-input-placeholder {  
+  color: rgb(0,0,0) !important;  
+}
+
+input:focus { 
+  outline: none !important;
+  border: none;
+  box-shadow: 2px 2px 10px rgb(0,0,0);
 }
 
 #char-search {
@@ -168,10 +191,10 @@ input[type="text"] {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,1);
+  background: rgba(255,255,255,0);
   color: rgb(0,0,0);
   margin: 0 auto;
-  padding: 1% 0 0 0;
+  padding: 1% 0;
   transition: all .2s ease-in-out;
   overflow: hidden;
   z-index: 2000;
@@ -269,7 +292,7 @@ footer {
 
   #char-search {
     margin: 0 auto;
-    padding: 1% 0 0 0;
+    padding: 1% 0 .75% 0;
   }
 
   input[type=text] {
