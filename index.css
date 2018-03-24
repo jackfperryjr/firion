@@ -169,6 +169,12 @@ input[type="text"] {
   transition: all .2s ease-in-out;
 }
 
+input[type=text]:hover, input[type=text]:active {
+    box-shadow: 3px 3px 10px rgb(140,140,140);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
 input::-webkit-input-placeholder {
   color: rgb(0,0,0) !important;
   -webkit-transition: all .5s ease-in-out;
@@ -318,12 +324,6 @@ footer {
     font-size: 16pt;
     height: 30px;
     width: 15%;
-  }
-
-  input[type=text]:hover {
-    box-shadow: 3px 3px 10px rgb(140,140,140);
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
   }
 
   input[type=text]:focus {
