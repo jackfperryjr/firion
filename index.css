@@ -1,7 +1,11 @@
 
-/* <--- Created by Jack F. Perry, Jr. ---> */
+/* Created by Jack F. Perry, Jr. */
 
-/* <--- Animation from animate.css */
+/*================================================*/
+/*          <--- Defining animations --->         */
+/*        <-- Borrowed from Animate.css -->       */
+/*================================================*/
+
 @-webkit-keyframes bounceInDown {
   from,
   60%,
@@ -95,10 +99,14 @@
   animation-direction: normal;
 }
 
+/*================================================*/
+/*     <--- End of animation definitions --->     */
+/*================================================*/
 
-/* <--- End of animation --->*/
+/*================================================*/
+/*      <--- Styles for main body html --->       */
+/*================================================*/
 
-/* <--- Styles for main body html and content (mobile first) ---> */
 html {
   height: 100%;
   color: rgb(0,0,0);
@@ -116,11 +124,13 @@ html {
   z-index: -100;
   background-color: rgb(255,255,255);
 
-  /* <--- Background image I was using, maybe I'll use again --->
-  *******************************
+  /*======================================================================*/
+  /*                 <--- Background image I was using --->               */
+  /*                                                                      
   background: url("images/backgroundLightning.jpg") no-repeat center center;
-  background-attachment: fixed !important;
-  ******************************/
+  background-attachment: fixed !important;   
+  /*  
+  /*======================================================================*/
 
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
@@ -150,9 +160,15 @@ html {
   height: auto;
   transition: all .5s ease-in-out;
 }
-/* <--- End of styles for main body html and content ---> */
 
-/* <--- Styles for search box ---> */
+/*================================================*/
+/*          <--- End of main styles --->          */
+/*================================================*/
+
+/*================================================*/
+/*        <--- Styles for search box --->         */
+/*================================================*/
+
 input[type="text"] {
   text-align: left;
   background: rgba(255,255,255,1);
@@ -174,7 +190,7 @@ input[type=text]:hover, input[type=text]:active {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
   }
-  
+
 input::-webkit-input-placeholder {
   color: rgb(0,0,0) !important;
   -webkit-transition: all .5s ease-in-out;
@@ -222,9 +238,15 @@ input:focus {
   overflow: hidden;
   z-index: 2000;
 }
-/* <--- End of styles for search box ---> */
 
-/* <--- Styles for character info card ---> */
+/*===============================================*/
+/*    <--- End of styles for search box --->     */
+/*===============================================*/
+
+/*================================================*/
+/*      <--- Styles for character card --->       */
+/*================================================*/
+
 #char-card {
   position: relative;
   width: 90%;
@@ -267,9 +289,15 @@ input:focus {
   max-height: 100%;
   max-width: 100%;
 }
-/* <--- End of styles for character info card ---> */
 
-/* <--- Styles for footer ---> */
+/*==============================================*/
+/*       <--- End of character card --->        */
+/*==============================================*/
+
+/*===============================================*/
+/*  <--- Styles for that super cool footer --->  */
+/*===============================================*/
+
 footer {
   position: relative;
   height: auto;
@@ -282,26 +310,31 @@ footer {
   vertical-align: middle;
   letter-spacing: 3px;
 }
-/* <--- End of styles for footer ---> */
 
-/* <--- MEDIA QUERIES --->
-************************************************************/
+/*====================================*/
+/*      <--- End of footer --->       */
+/*====================================*/
 
-/* <--- Weird sweet spot ---> */
+/*==================================================*/
+/*     <--- Media query-ing responsy-stuff --->     */
+/*==================================================*/
+
 @media only screen and (min-width: 450px) and (max-width: 799px) {
 
-  /* I needed this at some point, not sure why now */
+/*===================================================*/
+/*  <--- Weird sweet spot I need at some point --->  */
+/*===================================================*/
 
 }
 
-/* <--- Landscape view ---> */
 @media only screen and (min-width: 800px) and (max-width: 850px) {
   
-  /* I'll fix this soon */
+/*==========================================*/
+/*     <--- I'll fix this sometime --->     */
+/*==========================================*/
 
 }
 
-/* <--- Tablet and desktop view ---> */
 @media only screen and (min-width: 851px) {
 
   #title {
@@ -366,5 +399,7 @@ footer {
     letter-spacing: 5px;
   }
 }
-/************************************************************
-<--- End of media queries ---> */
+
+/*=================================================*/
+/*           <--- That's all, folks --->           */
+/*=================================================*/

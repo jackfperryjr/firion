@@ -1,31 +1,44 @@
 
 <!-- Created by Jack F. Perry, Jr. -->
-
+<!-- ============================= -->
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Boring stuff. -->
+        <!-- ============= -->
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Six+Caps|Special+Elite">
+        <meta name="description" content="Hi. I'm Jack. I'm a web designer and web developer and this is my Final Fantasy Compendium.">
+        <meta name="author" content="Jack F. Perry, Jr.">
+        <!-- =============================== -->
+        <!-- Bringing in a cool font I like. -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <!-- ================================== -->
+        <!-- Some customization by yours truly. -->
         <link rel="stylesheet" type="text/css" href="index.css">
+        <!-- =================== -->
+        <!-- Tab icon and title. -->
         <link rel="icon" href="images/moogleFavicon.png">
         <title>Final Fantasy Compendium</title>
     </head>
-
-  <!-- Start of finalFantasyComp application -->
+    <!-- ====================================== -->
+    <!-- Start of finalFantasyComp application. -->
     <body ng-app="finalFantasyApp">
         <div id="background-image">
             <div id="title" class="bounceInDown"><img src="images/finalFantasyLogo.png"></div>
             <div id="main-content">
-
-                <!-- Start of character controller -->
+                <!-- ============================== -->
+                <!-- Start of character controller. -->
                 <div ng-controller="characterController">
+                    <!-- ============================================================== -->
+                    <!-- Search bar displays characters after first 3 letters of input. -->
                     <div id="char-search" class="bounceInDown">
                         <input type="text" ng-model="search.name" ng-minlength="3" placeholder="enter a character...">
                     </div>
+                    <!-- ================================================= -->
+                    <!-- Displaying character info from data in JSON file. -->
                     <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
-
-                        <!-- Displaying character info from data in json file -->
                         <h2>{{character.name}}</h2>
                         <div id="char-info">
                             <h5>Age: {{character.age}}</h5>
@@ -42,13 +55,20 @@
                         <h5 id="description">{{character.quote}}<br><br>
                         {{character.description}}</h5>
                     </div>
-
+                    <!-- End of that character stuff. -->
+                    <!-- ============================ -->
                 </div>
             </div>
             <footer class="bounceInDown">&copy;2018 jack f. perry, jr.</footer>
         </div>
+        <!-- ================================= -->
+        <!-- Bringing in JQuery and AngularJS. -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-        <script src="angularIndex.js"></script>   
+        <!-- =========================== -->
+        <!-- A little something from me. -->
+        <script src="index.js"></script>   
     </body>
 </html>
+<!-- That's all I got. -->
+<!-- ================= -->
