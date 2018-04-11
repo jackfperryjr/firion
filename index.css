@@ -185,7 +185,9 @@ input[type="text"] {
   transition: all .2s ease-in-out;
 }
 
-input[type=text]:hover, input[type=text]:active {
+input[type=text]:hover,
+input[type=text]:focus, 
+input[type=text]:active {
     box-shadow: 3px 3px 10px rgb(140,140,140);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -384,7 +386,8 @@ footer {
     transition: all .5s ease-in-out;
   }
 
-  #char-image:hover {
+  #char-image:hover,
+  #char-image:focus {
     transform: scale(1.10);
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
