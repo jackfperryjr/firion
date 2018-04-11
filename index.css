@@ -186,8 +186,7 @@ input[type="text"] {
 }
 
 input[type=text]:hover,
-input[type=text]:focus, 
-input[type=text]:active {
+input[type=text]:focus {
     box-shadow: 3px 3px 10px rgb(140,140,140);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
