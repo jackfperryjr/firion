@@ -168,6 +168,21 @@ html {
 /*        <--- Styles for search box --->         */
 /*================================================*/
 
+#char-search {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -3px;
+  width: 100%;
+  background: rgba(255,255,255,0);
+  color: rgb(0,0,0);
+  margin: 0 auto;
+  padding: 1% 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  z-index: 2000;
+}
+
 input[type="text"] {
   text-align: left;
   background: rgba(255,255,255,1);
@@ -184,12 +199,19 @@ input[type="text"] {
   transition: all .2s ease-in-out;
 }
 
-input[type=text]:hover,
-input[type=text]:focus {
-    box-shadow: 0px 3px 8px rgb(140,140,140);
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
+input[type=text]:hover {
+  box-shadow: 0px 3px 8px rgb(140,140,140);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+input[type=text]:focus { 
+  width: 90%;
+  text-align: left;
+  box-shadow: 0px 3px 8px rgb(50,50,50);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
 
 input::-webkit-input-placeholder {
   color: rgb(0,0,0) !important;
@@ -205,6 +227,7 @@ input:-moz-placeholder { /* Firefox 18- */
  
 input::-moz-placeholder {  /* Firefox 19+ */
   color: rgb(0,0,0) !important;  
+  -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
  
@@ -212,31 +235,6 @@ input:-ms-input-placeholder {
   color: rgb(0,0,0) !important;  
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-}
-
-input:focus { 
-  width: 90%;
-  outline: none !important;
-  text-align: left;
-  border: none;
-  box-shadow: 0px 3px 8px rgb(50,50,50);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-#char-search {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -3px;
-  width: 100%;
-  background: rgba(255,255,255,0);
-  color: rgb(0,0,0);
-  margin: 0 auto;
-  padding: 1% 0;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .2s ease-in-out;
-  overflow: hidden;
-  z-index: 2000;
 }
 
 /*===============================================*/
@@ -335,7 +333,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 768px) {
 
   #title {
     top: 35%;
