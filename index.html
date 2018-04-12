@@ -49,7 +49,7 @@
                             <h5>Origin: {{character.origin}}</h5>
                         </div>
                         <div id="char-image">
-                            <img ng-src="{{character.image}}">
+                            <img ng-src="{{character.image}}" alt="{{character.alt}}" title="{{character.title}}">
                         </div>
                         <h5 id="description">{{character.quote}}<br><br>
                         {{character.description}}</h5>
@@ -61,8 +61,7 @@
             <footer class="bounceInDown">&copy;2018 jack f. perry, jr.</footer>
         </div>
         <!-- ================================= -->
-        <!-- Bringing in JQuery and AngularJS. -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <!-- Bringing in AngularJS. -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
         <!-- =========================== -->
         <!-- A little something from me. -->
