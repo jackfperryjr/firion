@@ -13,5 +13,10 @@ app.controller('characterController', function($scope, $http) {
       $scope.characters = response.data;
     });
 });
+// <-- Adding current year copyright --->
+// ======================================
+let today = new Date()
+let year = today.getFullYear()
+document.getElementById('footer-name').innerHTML = "&copy; " + year + " jack f. perry, jr.";
 // ====================
 // <-- That's that. -->
