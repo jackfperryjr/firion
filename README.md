@@ -1,5 +1,6 @@
 
-# finalFantasyComp
+## final-fantasy-angularjs
+
 A Final Fantasy Compendium
 
 ```

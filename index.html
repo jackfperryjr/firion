@@ -33,11 +33,11 @@
                     <!-- ============================================================== -->
                     <!-- Search bar displays characters after first 3 letters of input. -->
                     <div id="char-search" class="bounceInDown">
-                        <input type="text" ng-model="search.name" ng-minlength="3" placeholder="enter a character...">
+                        <input type="text" ng-model="search.name" ng-minlength="3" placeholder="search character by name">
                     </div>
                     <!-- ================================================= -->
                     <!-- Displaying character info from data in JSON file. -->
-                    <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:3" ng-hide="filteredData.length==characters.length">
+                    <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:1" ng-hide="filteredData.length==characters.length">
                         <h2>{{character.name}}</h2>
                         <div id="char-info">
                             <h5>Age: {{character.age}}</h5>
@@ -49,7 +49,7 @@
                             <h5>Origin: {{character.origin}}</h5>
                         </div>
                         <div id="char-image">
-                            <img ng-src="{{character.image}}" alt="{{character.alt}}" title="{{character.title}}">
+                            <img ng-src="{{character.image}}" alt="{{character.name}}" title="Picture of {{character.name}}">
                         </div>
                         <h5 id="description">{{character.quote}}<br><br>
                         {{character.description}}</h5>

@@ -147,8 +147,8 @@ html {
 #title {
   position: -webkit-sticky;
   position: sticky;
-  top: 30%;
-  margin: 65% auto 0 auto;
+  top: 2%;
+  margin: 0 auto;
   text-align: center;
   transition: all .2s ease-in-out;
   z-index: -100;
@@ -211,30 +211,6 @@ input[type=text]:focus {
   box-shadow: 0px 3px 8px rgb(50,50,50);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-}
-
-input::-webkit-input-placeholder {
-  color: rgb(0,0,0) !important;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
- 
-input:-moz-placeholder { /* Firefox 18- */
-  color: rgb(0,0,0) !important;  
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
- 
-input::-moz-placeholder {  /* Firefox 19+ */
-  color: rgb(0,0,0) !important;  
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
- 
-input:-ms-input-placeholder {  
-  color: rgb(0,0,0) !important;  
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 
 /*===============================================*/
@@ -317,29 +293,7 @@ footer {
 /*     <--- Media query-ing responsy-stuff --->     */
 /*==================================================*/
 
-@media only screen and (min-width: 450px) and (max-width: 799px) {
-
-/*===================================================*/
-/*  <--- Weird sweet spot I need at some point --->  */
-/*===================================================*/
-
-}
-
-@media only screen and (min-width: 800px) and (max-width: 850px) {
-  
-/*==========================================*/
-/*     <--- I'll fix this sometime --->     */
-/*==========================================*/
-
-}
-
 @media only screen and (min-width: 768px) {
-
-  #title {
-    top: 35%;
-    margin: 17% auto 0 auto;
-  }
-
   #title img {
     height: auto;
     width: 40%;
@@ -351,10 +305,10 @@ footer {
   }
 
   input[type=text] {
-    padding-left: 25px;
+    outline: none;
     font-size: 16pt;
     height: 30px;
-    width: 15%;
+    width: 25%;
   }
 
   input[type=text]:focus {
@@ -377,7 +331,13 @@ footer {
   }
 
   #char-image {
-    width: 200px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 50%;
+    object-fit: fill;
+    object-position: center;
+    overflow: hidden;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
@@ -387,10 +347,6 @@ footer {
     transform: scale(1.10);
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-  }
-
-  #char-image img {
-    margin-right: 3em;
   }
 
   footer {
