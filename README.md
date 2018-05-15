@@ -36,6 +36,6 @@ The CSS class(es) I created are:
 ```
 The Javascript function I created is:
 
-AngularJS component used to read data from a JSON file. 
-Many AngularJS directives used in the HTML to display said data.
+AngularJs component used to read data from a JSON file. 
+Many AngularJs directives used in the HTML to display said data.
 ```
