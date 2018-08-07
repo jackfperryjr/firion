@@ -37,7 +37,7 @@
                     </div>
                     <!-- ================================================= -->
                     <!-- Displaying character info from data in JSON file. -->
-                    <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:1" ng-hide="filteredData.length==characters.length">
+                    <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:5">
                         <h2>{{character.name}}</h2>
                         <div id="char-info">
                             <h5>Age: {{character.age}}</h5>
@@ -45,13 +45,13 @@
                             <h5>Gender: {{character.gender}}</h5>
                             <h5>Height: {{character.height}}</h5>
                             <h5>Weight: {{character.weight}}</h5>
-                            <h5>Class: {{character.class}}</h5>
+                            <h5>Class: {{character.job}}</h5>
                             <h5>Origin: {{character.origin}}</h5>
                         </div>
                         <div id="char-image">
-                            <img ng-src="{{character.image}}" alt="{{character.name}}" title="Picture of {{character.name}}">
+                            <img ng-src="{{character.picture}}" alt="{{character.name}}" title="Picture of {{character.name}}">
                         </div>
-                        <h5 id="description">{{character.quote}}<br><br>
+                        <br/><br/><br/>
                         {{character.description}}</h5>
                     </div>
                     <!-- End of that character stuff. -->

@@ -194,7 +194,7 @@ input[type="text"] {
   color: rgb(255,0,0);
   font-size: 16pt;
   height: 20px;
-  width: 47%;
+  width: 100%;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -206,7 +206,6 @@ input[type=text]:hover {
 }
 
 input[type=text]:focus { 
-  width: 90%;
   text-align: left;
   box-shadow: 0px 3px 8px rgb(50,50,50);
   -webkit-transition: all .2s ease-in-out;
@@ -308,12 +307,11 @@ footer {
     outline: none;
     font-size: 16pt;
     height: 30px;
-    width: 25%;
+    width: 45%;
   }
 
   input[type=text]:focus {
     padding: 0;
-    width: 45%;
     border-left: 1px solid rgb(0,0,0);
     border-bottom: 1px solid rgb(0,0,0);
     box-shadow: 0px 3px 8px rgb(50,50,50);
