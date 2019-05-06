@@ -8,7 +8,7 @@ var app = angular.module('finalFantasyApp', []);
 // <--- Angular controller to manage the characters --->
 // =====================================================
 app.controller('characterController', function($scope, $http) {
-  $http.get('https://moogleapi.azurewebsites.net/api/characters')
+  $http.get('https://www.moogleapi.com/api/v1/characters')
     .then(function(response) {
       $scope.characters = response.data;
     });
