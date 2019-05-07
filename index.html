@@ -1,42 +1,24 @@
-<!-- Created by Jack F. Perry, Jr. -->
-<!-- ============================= -->
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Boring stuff. -->
-        <!-- ============= -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <meta name="description" content="Hi. I'm Jack. I'm a web designer and web developer and this is my Final Fantasy Compendium.">
         <meta name="author" content="Jack F. Perry, Jr.">
-        <!-- =============================== -->
-        <!-- Bringing in a cool font I like. -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <!-- ================================== -->
-        <!-- Some customization by yours truly. -->
         <link rel="stylesheet" type="text/css" href="index.css">
-        <!-- =================== -->
-        <!-- Tab icon and title. -->
         <link rel="icon" href="images/moogleFavicon.png">
         <title>Final Fantasy Compendium</title>
     </head>
-    <!-- ====================================== -->
-    <!-- Start of finalFantasyComp application. -->
     <body ng-app="finalFantasyApp">
         <div id="background-image">
             <div id="title" class="bounceInDown"><img src="images/finalFantasyLogo.png"></div>
             <div id="main-content">
-                <!-- ============================== -->
-                <!-- Start of character controller. -->
                 <div ng-controller="characterController">
-                    <!-- ============================================================== -->
-                    <!-- Search bar displays characters after first 3 letters of input. -->
                     <div id="char-search" class="bounceInDown">
                         <input type="text" ng-model="search.name" ng-minlength="3" placeholder="search character by name">
                     </div>
-                    <!-- ================================================= -->
-                    <!-- Displaying character info from data in JSON file. -->
                     <div id="char-card" ng-repeat="character in filteredData = (characters | filter:search.name:strict) | limitTo:5">
                         <h2>{{character.name}}</h2>
                         <div id="char-info">
@@ -54,19 +36,11 @@
                         <br/><br/><br/>
                         {{character.description}}</h5>
                     </div>
-                    <!-- End of that character stuff. -->
-                    <!-- ============================ -->
                 </div>
             </div>
             <footer id="footer-name" class="bounceInDown"></footer>
         </div>
-        <!-- ================================= -->
-        <!-- Bringing in AngularJS. -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-        <!-- =========================== -->
-        <!-- A little something from me. -->
         <script src="index.js"></script>   
     </body>
 </html>
-<!-- That's all I got. -->
-<!-- ================= -->

@@ -1,10 +1,3 @@
-/* Created by Jack F. Perry, Jr. */
-
-/*================================================*/
-/*          <--- Defining animations --->         */
-/*        <-- Borrowed from Animate.css -->       */
-/*================================================*/
-
 @-webkit-keyframes bounceInDown {
   from,
   60%,
@@ -98,14 +91,6 @@
   animation-direction: normal;
 }
 
-/*================================================*/
-/*     <--- End of animation definitions --->     */
-/*================================================*/
-
-/*================================================*/
-/*      <--- Styles for main body html --->       */
-/*================================================*/
-
 html {
   height: 100%;
   color: rgb(0,0,0);
@@ -122,15 +107,6 @@ html {
   height: 100%;
   z-index: -100;
   background-color: rgb(255,255,255);
-
-  /*======================================================================*/
-  /*                 <--- Background image I was using --->               */
-  /*                                                                      
-  background: url("images/backgroundLightning.jpg") no-repeat center center;
-  background-attachment: fixed !important;   
-  /*  
-  /*======================================================================*/
-
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   -webkit-background-size: cover !important;
@@ -159,14 +135,6 @@ html {
   height: auto;
   transition: all .5s ease-in-out;
 }
-
-/*================================================*/
-/*          <--- End of main styles --->          */
-/*================================================*/
-
-/*================================================*/
-/*        <--- Styles for search box --->         */
-/*================================================*/
 
 #char-search {
   position: -webkit-sticky;
@@ -212,14 +180,6 @@ input[type=text]:focus {
   transition: all .2s ease-in-out;
 }
 
-/*===============================================*/
-/*    <--- End of styles for search box --->     */
-/*===============================================*/
-
-/*================================================*/
-/*      <--- Styles for character card --->       */
-/*================================================*/
-
 #char-card {
   position: relative;
   width: 90%;
@@ -263,14 +223,6 @@ input[type=text]:focus {
   max-width: 100%;
 }
 
-/*==============================================*/
-/*       <--- End of character card --->        */
-/*==============================================*/
-
-/*===============================================*/
-/*  <--- Styles for that super cool footer --->  */
-/*===============================================*/
-
 footer {
   position: relative;
   height: auto;
@@ -283,14 +235,6 @@ footer {
   vertical-align: middle;
   letter-spacing: 3px;
 }
-
-/*====================================*/
-/*      <--- End of footer --->       */
-/*====================================*/
-
-/*==================================================*/
-/*     <--- Media query-ing responsy-stuff --->     */
-/*==================================================*/
 
 @media only screen and (min-width: 768px) {
   #title img {
@@ -352,7 +296,3 @@ footer {
     letter-spacing: 5px;
   }
 }
-
-/*=================================================*/
-/*           <--- That's all, folks --->           */
-/*=================================================*/

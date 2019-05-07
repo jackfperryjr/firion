@@ -1,21 +1,11 @@
-// <-- Created by Jack F. Perry, Jr. -->
-// =====================================
+var app = angular.module('finalFantasyApp', []); // Initializing Angular.Js component.
 
-// <--- Initializing Angular component --->
-// ========================================
-var app = angular.module('finalFantasyApp', []);
-
-// <--- Angular controller to manage the characters --->
-// =====================================================
-app.controller('characterController', function($scope, $http) {
+app.controller('characterController', function($scope, $http) { // Controller to manage characters.
   $http.get('https://www.moogleapi.com/api/v1/characters')
     .then(function(response) {
       $scope.characters = response.data;
     });
 });
-// <-- Adding current year copyright --->
-// ======================================
-let year = new Date().getFullYear();
-document.getElementById('footer-name').innerHTML = "&copy; " + year + " jack f. perry, jr.";
-// ====================
-// <-- That's that. -->
+
+let year = new Date().getFullYear(); // Getting the current full year.
+document.getElementById('footer-name').innerHTML = "&copy; " + year + " jack f. perry, jr."; // Adding full year to the copyright.
